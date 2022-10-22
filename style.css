@@ -1,0 +1,49 @@
+:root {
+  --color-background-default: #1c2027;
+  --color-white: #f2f5fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+
+html {
+  font-size: 62.5%; /* font-size 1rem = 10px on default browser settings */
+}
+
+/* --------- NAV --------- */
+nav {
+  height: 8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: var(--color-background-default);
+}
+
+.menu a {
+  margin: 0 2rem;
+
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+.contact {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--color-white);
+}
