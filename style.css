@@ -12,7 +12,7 @@
   --color-secondary-400: #d1e6db;
 
   --color-black-100: #0c0c0d;
-  --color-black-200: #2525;
+  --color-black-200: #252526;
   --color-black-300: #3d3e40;
   --color-black-400: #626366;
   --color-black-500: #7a7c80;
@@ -75,7 +75,20 @@ nav {
   align-items: center;
   justify-content: center;
 
-  background: url(assets/vector-rectangle.svg) left -10px top -20px no-repeat;
+  /* background: url(assets/vector-rectangle.svg) left -10px top -20px no-repeat; */
+}
+
+.rectangle-left-presentation {
+  position: absolute;
+  top: 35px;
+  left: -20px;
+}
+
+.rectangle-right-presentation {
+  position: absolute;
+  rotate: 175deg;
+  top: 0;
+  right: 123px;
 }
 
 .presentation .container {
@@ -226,4 +239,113 @@ nav {
 
 .images img:nth-child(2) {
   align-self: flex-end;
+}
+
+/* --------- SECTION - TOOLS --------- */
+.tools {
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 7.2rem; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7.2rem;
+
+  height: 12.5rem;
+  background-color: var(--color-primary-100);
+}
+
+/* --------- SECTION - GRADUATIONS --------- */
+.graduations {
+  display: flex;
+  justify-content: center;
+
+  /* height: 80rem; */
+  padding: 10rem 0;
+  background-color: var(--color-primary-200);
+}
+
+.graduations .container {
+  width: 100%;
+  max-width: 1170px;
+
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.graduations .title {
+  /* align-self: center; */
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+  color: var(--color-secondary-200);
+}
+
+.graduations .subtitle {
+  margin-bottom: 9rem;
+  font-size: 4rem;
+  line-height: 6.2rem;
+  color: var(--color-grey-1000);
+}
+
+.history {
+  display: grid;
+  grid-template-columns: 150px 60px 530px;
+  gap: 8rem;
+  /* grid-template-columns: 15rem 6rem 5.3rem; */
+}
+
+/* ------ DIV - LOCATION ------ */
+.location .place {
+  display: flex;
+  flex-direction: column;
+}
+
+.location .place h5 {
+  align-self: flex-end;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+  color: var(--color-grey-1000);
+}
+
+.location .place p {
+  align-self: flex-end;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: var(--color-grey-600);
+}
+
+/* ------ DIV - TIMELINE ------ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline .line {
+  height: 200px;
+}
+
+/* ------ DIV - HISTORY ------ */
+.history .degree h5 {
+  margin-bottom: 3rem;
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+  /* border-bottom: #3be88e; */
+
+  color: var(--color-grey-1000);
+}
+
+.history .degree p {
+  margin-bottom: 10rem;
+  width: 35rem;
+  font-size: 1.4rem;
+  line-height: 2.7rem;
+  color: var(--color-grey-600);
 }
