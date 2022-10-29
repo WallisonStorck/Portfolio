@@ -42,6 +42,7 @@ nav {
   align-items: center;
   justify-content: space-around;
   background-color: var(--color-background);
+  z-index: 1;
 }
 
 .menu a {
@@ -74,21 +75,22 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  /* background: url(assets/vector-rectangle.svg) left -10px top -20px no-repeat; */
+  z-index: 1;
 }
 
 .rectangle-left-presentation {
   position: absolute;
-  top: 35px;
+  /* top: 80px; */
+  top: 60px;
   left: -20px;
 }
 
 .rectangle-right-presentation {
   position: absolute;
-  rotate: 175deg;
-  top: 0;
-  right: 123px;
+  rotate: 360deg;
+  /* top: 80px; */
+  top: 60px;
+  right: -35px;
 }
 
 .presentation .container {
@@ -157,6 +159,10 @@ nav {
   background-color: transparent;
   color: var(--color-primary-200);
 }
+
+/* .presentation-image {
+  z-index: 0;
+} */
 
 .mouse-line {
   display: flex;
@@ -295,57 +301,93 @@ nav {
 
 .history {
   display: grid;
-  grid-template-columns: 150px 60px 530px;
-  gap: 8rem;
-  /* grid-template-columns: 15rem 6rem 5.3rem; */
+  grid-template-columns: 10vw 4vw 35vw;
+  grid-template-rows: 8vh 25vh 8vh 25vh 8vh 25vh;
+  gap: 0 8rem;
+  /* grid-auto-flow: row; */
+  grid-template-areas:
+    "place-fimca icon-fimca degree-fimca"
+    ". . description-fimca"
+    "place-ipog icon-ipog degree-ipog"
+    ". . description-ipog"
+    "place-ulbra icon-ulbra degree-ulbra"
+    ". . description-ulbra";
 }
 
-/* ------ DIV - LOCATION ------ */
-.location .place {
+.place {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 
-.location .place h5 {
-  align-self: flex-end;
-  font-weight: 700;
+.place h5 {
   font-size: 2.4rem;
   line-height: 2.7rem;
   color: var(--color-grey-1000);
 }
 
-.location .place p {
-  align-self: flex-end;
+.place p {
   font-size: 1.8rem;
   line-height: 2.7rem;
   color: var(--color-grey-600);
 }
 
-/* ------ DIV - TIMELINE ------ */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.icon-degrees {
+  justify-self: center;
 }
 
-.timeline .line {
-  height: 200px;
-}
-
-/* ------ DIV - HISTORY ------ */
-.history .degree h5 {
-  margin-bottom: 3rem;
+.degree h5 {
+  font-weight: 400;
   font-size: 2.4rem;
-  line-height: 2.7rem;
-  /* border-bottom: #3be88e; */
-
   color: var(--color-grey-1000);
 }
 
-.history .degree p {
-  margin-bottom: 10rem;
+.description p {
   width: 35rem;
   font-size: 1.4rem;
   line-height: 2.7rem;
   color: var(--color-grey-600);
+}
+
+.degree-ulbra {
+  grid-area: 5 / 3 / 6 / 4;
+}
+.icon-ulbra {
+  grid-area: 5 / 2 / 6 / 3;
+}
+.place-ulbra {
+  grid-area: 5 / 1 / 6 / 2;
+}
+.place-ipog {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.icon-ipog {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.degree-ipog {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.place-fimca {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.icon-fimca {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.degree-fimca {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.description-fimca {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.description-ipog {
+  grid-area: 4 / 3 / 5 / 4;
+}
+.description-ulbra {
+  grid-area: 6 / 3 / 7 / 4;
+}
+.timeline {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  grid-area: 2 / 2 / 5 / 3;
 }
