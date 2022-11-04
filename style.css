@@ -1,5 +1,9 @@
 :root {
   --color-background: #1c2027;
+  --color-borders-titles: #0a9c5180;
+  --color-divider-courses: #273041;
+  --color-divider-projects: #cfd7e4;
+  --color-description-project: #e0e3eb;
 
   --color-primary-100: #181a20;
   --color-primary-200: #1c1f26;
@@ -86,7 +90,7 @@ nav {
 
 .languages {
   display: flex;
-  gap: 10px;
+  gap: 0.7rem;
 }
 
 .languages button {
@@ -405,10 +409,25 @@ nav {
   justify-self: center;
 }
 
+.degree-title {
+  margin-bottom: 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
 .degree h5 {
   font-weight: 400;
   font-size: 2.4rem;
+  line-height: 2.7rem;
   color: var(--color-grey-1000);
+}
+
+.degree-title .border-bottom {
+  width: 8rem;
+  height: 0.2rem;
+  background-color: var(--color-borders-titles);
 }
 
 .history .description p {
@@ -466,16 +485,21 @@ nav {
   display: flex;
   justify-content: center;
 
-  height: 37rem;
+  /* height: 37rem; */
   background-color: var(--color-primary-100);
 }
 
 .courses .container {
-  width: 80%;
-
-  display: flex;
-  align-items: center;
+  width: 100%;
+  max-width: 1170px;
   justify-content: center;
+  margin: 9.7rem 0;
+
+  display: grid;
+  grid-template-columns: 33rem 6rem 33rem;
+  grid-template-rows: repeat(2, 26rem);
+  gap: 50px 100px;
+  align-items: center;
 }
 
 .course {
@@ -486,22 +510,37 @@ nav {
   align-items: center;
 }
 
-.course h4 {
+.course img {
+  margin-bottom: 2.4rem;
+}
+
+/* .course h4 {
   margin-bottom: 1.6rem;
   text-align: center;
   font-size: 2.4rem;
   line-height: 2.7rem;
   color: var(--color-grey-1000);
+} */
+
+.course-title {
+  margin-bottom: 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
 }
 
-.course h6 {
-  margin-bottom: 3rem;
-  border-bottom: 2px solid #0a9c5180;
-
+.course-title h6 {
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 2rem;
   color: var(--color-grey-1000);
+}
+
+.course-title .border-bottom {
+  width: 8rem;
+  height: 0.2rem;
+  background-color: var(--color-borders-titles);
 }
 
 .course p {
@@ -516,7 +555,7 @@ nav {
   width: 2px;
   height: 153px;
   border-radius: 2px;
-  background-color: #273041;
+  background-color: var(--color-divider-courses);
 }
 
 /* --------- SECTION - PROJECTS --------- */
@@ -582,7 +621,7 @@ nav {
   padding: 3.2rem;
   margin-bottom: 1rem;
   border-radius: 1.6rem;
-  background-color: #e0e3eb;
+  background-color: var(--color-description-project);
 
   display: flex;
   flex-direction: column;
@@ -620,6 +659,7 @@ nav {
   gap: 1.4rem;
   /* Espaçamento interno um pouco diferente do projeto */
   font-size: 1.4rem;
+  text-decoration: none;
   border: transparent;
   background-color: transparent;
   color: var(--color-primary-200);
@@ -629,5 +669,5 @@ nav {
   width: 100%;
   height: 0.3rem;
   border-radius: 2px;
-  background-color: #cfd7e4;
+  background-color: var(--color-divider-projects);
 }
