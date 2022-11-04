@@ -17,22 +17,31 @@
 <body>
   <header>
     <nav>
-      <img src="assets/LogoWallison.svg" alt="Logo Wallison">
       <div class="menu">
-        <a href="#presentation">Home</a>
-        <a href="#about-me">Sobre</a>
-        <a href="#projects">Portfólio</a>
-        <a href="#contact">Contato</a>
+        <img src="assets/LogoWallison.svg" alt="Logo Wallison">
+        <div class="links">
+          <a href="#presentation">Home</a>
+          <a href="#about-me">Sobre</a>
+          <a href="#projects">Portfólio</a>
+          <a href="#contact">Contato</a>
+        </div>
       </div>
-      <div class="contact">
-        <a href="mailto:storck779@gmail.com">
-          <img src="assets/icons/icon-email.svg" alt="E-mail">
-          storck779@gmail.com
-        </a>
+      <div class="language-networks">
+        <div class="languages">
+          <button class="language-activated">PT</button>
+          <div class="laguages-divider"></div>
+          <button class="language-disabled">US</button>
+        </div>
+        <!-- <div class="contact"> -->
         <a href="https://www.linkedin.com/in/wallisonstorck/" target="_blank">
           <img src="assets/icons/icon-linkedin.svg" alt="Linkedin">
           Linkedin
         </a>
+        <a href="mailto:storck779@gmail.com">
+          <img src="assets/icons/icon-email.svg" alt="E-mail">
+          storck779@gmail.com
+        </a>
+        <!-- </div> -->
       </div>
     </nav>
   </header>
@@ -48,12 +57,13 @@
         <h6 class="tag-default">Front-End Developer Jr</h6>
         <h3>Olá, eu sou</h3>
         <h1>Wallison Storck.</h1>
-        <!-- <h1>Olá, eu sou <br> <strong>Wallison Storck.</strong></h1> -->
         <p>Formado em Sistemas de Informação, busco uma transição para Desenvolvimento Web com conhecimentos como HTML,
           CSS, ReactJS, NodeJS, MongoDB, além do próprio JavaScript.</p>
         <div class="description-buttons">
-          <button class="btn-contact">Entre em contato</button>
-          <button class="btn-portfolio">Visualizar Portfólio<img src="assets/btn-arrow.svg"></button>
+          <a href="https://wa.me/5569992691959?text=Ol%C3%A1+Wallison%2C+eu+estava+olhando+seu+site..." target="_blank"
+            class="btn-green"><img src="assets/icons/icon-whatsapp.svg" alt="Icone WhatsApp">Entre em
+            contato</a>
+          <a href="#projects" class="btn-portfolio">Visualizar Portfólio<img src="assets/btn-arrow.svg"></a>
         </div>
       </div>
       <div class="presentation-image">
@@ -68,33 +78,35 @@
   <section id="about-me" class="about-me">
     <div class="container">
       <div class="images">
-        <img src="assets/img1-about-me.png" alt="Foto Escritório">
-        <img src="assets/img2-about-me.png" alt="Foto Escritório">
+        <img src="assets/images/img1-about-me.png" alt="Mesa de Escritório">
+        <img src="assets/images/img2-about-me.png" alt="Notebook">
       </div>
       <div class="description">
         <h5>Resumo</h5>
         <h4>Sobre mim</h4>
-        <p>Olá sou Wallison Storck, bacharel em Sistemas de Informação pelo Centro Universitário Luterano de Ji-Paraná.
+        <p>Olá sou Wallison Storck, bacharel em Sistemas de Informação pelo Centro Universitário Luterano de
+          <br>Ji-Paraná.
           Especialista em Computação Forense e Perícia Digital pelo Instituto de Graduação e Pós-Graduação. Especialista
           em Metodologias do Ensino Superior pela FIMCA Unicentro.
           Atualmente busco uma transição para Desenvolvimento Web, possuo conhecimentos na stack ECMAScript, como HTML,
-          CSS, ReactJS, NodeJS, MongoDB, além do próprio JavaScript.</p>
+          CSS, ReactJS, NodeJS, MongoDB, além do próprio JavaScript.
+        </p>
         <div class="buttons-contact-cv">
-          <button class="btn-contact">Entrar em contato</button>
-          <button class="btn-download-cv">
-            <img src="assets/icons/icon-download.svg" alt="Download">
-            Download CV
-          </button>
+          <a href="https://wa.me/5569992691959?text=Ol%C3%A1+Wallison%2C+eu+estava+olhando+seu+site..." target="_blank"
+            class="btn-green"><img src="assets/icons/icon-whatsapp.svg" alt="Icone WhatsApp">Entre em
+            contato</a>
+          <a href="https://resume.io/r/0f0kiEsTa" target="_blank" class="btn-download-cv"><img
+              src="assets/icons/icon-download.svg" alt="Download">Download CV</a>
         </div>
         <div class="buttons-social-networks">
           <a href="https://www.linkedin.com/in/wallisonstorck" target="_blank"><img src="assets/icons/btn-linkedin.svg"
               alt="Linkedin"></a>
           <a href="https://github.com/WallisonStorck" target="_blank"><img src="assets/icons/btn-github.svg"
               alt="GitHub"></a>
-          <a href="https://wa.me/5569992691959?text=Ol%C3%A1+Wallison%2C+eu+estava+olhando+seu+site..."
-            target="_blank"><img src="assets/icons/btn-whatsapp.svg" alt="WhatsApp"></a>
           <a href="https://www.instagram.com/wallison_storck/" target="_blank"><img src="assets/icons/btn-instagram.svg"
               alt="Instagram"></a>
+          <a href="https://twitter.com/wallison_storck" target="_blank"><img src="assets/icons/btn-twitter.svg"
+              alt="Twitter"></a>
         </div>
       </div>
     </div>
@@ -195,9 +207,9 @@
   <section id="projects" class="projects">
     <div class="container">
       <h5 class="title">Resumo</h5>
-      <h4 class="subtitle">Minhas formações</h4>
+      <h4 class="subtitle">Meus projetos</h4>
       <div class="project">
-        <img src="assets/project_Herbert.png" alt="Projeto Advocacia">
+        <img src="assets/images/print_project_Herbert.png" alt="Projeto Advocacia">
         <div class="container-project">
           <h6>Freelance</h6>
           <div class="description-project">
@@ -242,11 +254,11 @@
             </button>
           </div>
         </div>
-        <img src="assets/project_Herbert.png" alt="Projeto Advocacia">
+        <img src="assets/images/print_project_instagram.png" alt="Projeto Login Instagram">
       </div>
       <div class="divider-project"></div>
       <div class="project">
-        <img src="assets/project_Herbert.png" alt="Projeto Advocacia">
+        <img src="assets/images/print_project_optimus.png" alt="Projeto Optimus Tech">
         <div class="container-project">
           <h6>Projeto</h6>
           <div class="description-project">
@@ -293,11 +305,10 @@
             </button>
           </div>
         </div>
-        <img src="assets/project_Herbert.png" alt="Projeto Advocacia">
+        <img src="assets/images/print_project_reactCountries.png" alt="Projeto React Countries">
       </div>
-      <a href="https://github.com/WallisonStorck?tab=repositories" target="_blank">
-        <Button class="btn-contact">Visualizar todos os projetos</Button>
-      </a>
+      <a href="https://github.com/WallisonStorck?tab=repositories" target="_blank" class="btn-green">Visualizar todos os
+        projetos</a>
     </div>
   </section>
   <section id="contact" class="contact"></section>

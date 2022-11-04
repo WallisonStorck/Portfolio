@@ -35,17 +35,31 @@ html {
   font-size: 62.5%; /* font-size 1rem = 10px on default browser settings */
 }
 
-/* --------- NAV --------- */
+/* --------- HEADER --------- */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-background);
+}
+
 nav {
+  width: 100%;
+  max-width: 1170px;
+
   height: 8rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background-color: var(--color-background);
-  z-index: 1;
+  justify-content: space-between;
+  /* z-index: 1; */
 }
 
-.menu a {
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 6.4rem;
+}
+
+.links a {
   margin: 0 2rem;
 
   text-decoration: none;
@@ -53,7 +67,53 @@ nav {
   color: var(--color-grey-1000);
 }
 
-.contact {
+.language-networks {
+  font-size: 1.4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.language-networks a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  text-decoration: none;
+  color: var(--color-grey-1000);
+}
+
+.languages {
+  display: flex;
+  gap: 10px;
+}
+
+.languages button {
+  cursor: pointer;
+  font-size: 1.4rem;
+
+  border: none;
+  background-color: transparent;
+}
+
+.language-activated {
+  font-weight: 700;
+  color: var(--color-secondary-100);
+}
+
+.language-disabled {
+  font-weight: 400;
+  color: var(--color-grey-1000);
+}
+
+.languages .laguages-divider {
+  width: 0.2rem;
+  height: 2rem;
+  background-color: var(--color-grey-1000);
+}
+
+/* .contact {
   display: flex;
   gap: 2.4rem;
 }
@@ -66,7 +126,7 @@ nav {
   font-size: 1.4rem;
   text-decoration: none;
   color: var(--color-grey-1000);
-}
+} */
 
 /* --------- SECTION - PRESENTATION --------- */
 .presentation {
@@ -116,19 +176,19 @@ nav {
 }
 
 .presentation-description h3 {
-font-weight: 400;
-font-size: 4.8rem;
-/* line-height: 6.3rem; */
-letter-spacing: -0.04em;
-color: var(--color-black-100);
+  font-weight: 400;
+  font-size: 4.8rem;
+  /* line-height: 6.3rem; */
+  letter-spacing: -0.04em;
+  color: var(--color-black-100);
 }
 
 .presentation-description h1 {
   /* font-weight: 700; */
-font-size: 6.4rem;
-/* line-height: 8.4rem; */
-letter-spacing: -0.05em;
-color: var(--color-primary-200);
+  font-size: 6.4rem;
+  /* line-height: 8.4rem; */
+  letter-spacing: -0.05em;
+  color: var(--color-primary-200);
 }
 
 .presentation-description p {
@@ -145,11 +205,17 @@ color: var(--color-primary-200);
   gap: 3.2rem;
 }
 
-.btn-contact {
+.btn-green {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
   cursor: pointer;
   padding: 16px 32px;
+  text-decoration: none;
   border-radius: 6px;
   border: none;
+  font-size: 1.4rem;
   color: var(--color-grey-1000);
   background: var(--color-secondary-100);
 }
@@ -160,6 +226,7 @@ color: var(--color-primary-200);
   align-items: center;
   gap: 1rem;
   font-size: 1.4rem;
+  text-decoration: none;
   border: transparent;
   background-color: transparent;
   color: var(--color-primary-200);
@@ -198,6 +265,19 @@ color: var(--color-primary-200);
   /* display: flex; */
 }
 
+.images {
+  display: flex;
+  gap: 3rem;
+}
+
+.images img:nth-child(1) {
+  align-self: flex-start;
+}
+
+.images img:nth-child(2) {
+  align-self: flex-end;
+}
+
 .about-me .description h5 {
   font-weight: 400;
   font-size: 2.4rem;
@@ -220,9 +300,6 @@ color: var(--color-primary-200);
 
 .buttons-contact-cv {
   margin-bottom: 4.8rem;
-}
-
-.buttons-contact-cv {
   display: flex;
   gap: 2.4rem;
 }
@@ -232,41 +309,30 @@ color: var(--color-primary-200);
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  border: none;
-  background: transparent;
-
-  font-size: 16px;
+  text-decoration: none;
+  font-size: 1.6rem;
   color: var(--color-grey-1000);
-}
-
-.images {
-  display: flex;
-  gap: 3rem;
-}
-
-.images img:nth-child(1) {
-  align-self: flex-start;
-}
-
-.images img:nth-child(2) {
-  align-self: flex-end;
 }
 
 /* --------- SECTION - TOOLS --------- */
 .tools {
-  /* display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-template-columns: repeat(5, 5rem);
   align-items: center;
   justify-content: center;
-  gap: 7.2rem; */
+  gap: 7rem;
 
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7.2rem;
+  gap: 7rem; */
 
   height: 12.5rem;
   background-color: var(--color-primary-100);
+}
+
+.tools img {
+  justify-self: center;
 }
 
 /* --------- SECTION - GRADUATIONS --------- */
@@ -455,8 +521,6 @@ color: var(--color-primary-200);
 
 /* --------- SECTION - PROJECTS --------- */
 .projects {
-  
-
   display: flex;
   justify-content: center;
   /* height: 100rem; */
@@ -565,5 +629,5 @@ color: var(--color-primary-200);
   width: 100%;
   height: 0.3rem;
   border-radius: 2px;
-  background-color: #cfd7e4;Instagram para o primeiro acesso.
+  background-color: #cfd7e4;
 }
