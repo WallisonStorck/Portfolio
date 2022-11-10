@@ -375,7 +375,7 @@ nav {
   padding-left: 25rem;
   display: grid;
   grid-template-columns: 10vw 4vw 40vw;
-  grid-template-rows: 8vh 25vh 8vh 25vh 8vh 25vh;
+  grid-template-rows: 6vh 35vh 6vh 35vh 6vh 35vh;
   gap: 0 8rem;
   /* grid-auto-flow: row; */
   grid-template-areas:
@@ -410,7 +410,7 @@ nav {
 }
 
 .degree-title {
-  margin-bottom: 2.2rem;
+  /* margin-bottom: 2.2rem; */
 
   display: flex;
   flex-direction: column;
@@ -431,7 +431,8 @@ nav {
 }
 
 .history .description p {
-  width: 35rem;
+  margin-top: 0.9rem;
+  width: 56rem;
   font-size: 1.4rem;
   line-height: 2.7rem;
   color: var(--color-grey-600);
@@ -670,4 +671,139 @@ nav {
   height: 0.3rem;
   border-radius: 2px;
   background-color: var(--color-divider-projects);
+}
+
+/* --------- SECTION - CONTACT --------- */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85rem;
+  background-color: var(--color-primary-200);
+}
+
+.contact .container {
+  width: 100%;
+  max-width: 1170px;
+
+  display: flex;
+  gap: 0 13rem;
+}
+
+.description-contact {
+  width: 47rem;
+}
+
+.description-contact img {
+  width: 5.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.description-contact h2 {
+  font-size: 5.6rem;
+  letter-spacing: -0.05em;
+  color: var(--color-grey-1000);
+}
+
+.description-contact p {
+  margin: 2.4rem 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  /* or 193% */
+
+  color: var(--color-grey-700);
+}
+
+/* ------ Form ------ */
+.contact form {
+  display: grid;
+  grid-template-columns: 277px 277px;
+  grid-template-rows: 55px 55px 149px 55px;
+  gap: 16px;
+  grid-template-areas:
+    "name email"
+    "phone subject"
+    "message message"
+    "button button";
+}
+
+.contact .inputs {
+  padding: 14px 10px;
+  background: transparent;
+  border: 1px solid #313948;
+  border-radius: 6px;
+  color: var(--color-grey-1000);
+}
+
+#name {
+  grid-area: name;
+}
+
+#email {
+  grid-area: email;
+}
+
+#phone {
+  grid-area: phone;
+}
+
+#subject {
+  grid-area: subject;
+}
+
+#message {
+  grid-area: message;
+  resize: none;
+}
+
+.btn-send-message {
+  grid-area: button;
+  /* width: 57rem; */
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 3.2rem;
+  gap: 1rem;
+  border: none;
+  border-radius: 6px;
+  color: var(--color-grey-1000);
+  background: var(--color-secondary-100);
+}
+
+/* --------- FOOTER --------- */
+footer {
+  display: flex;
+  justify-content: center;
+
+  height: 9.6rem;
+  background-color: var(--color-primary-100);
+}
+
+footer .container {
+  width: 100%;
+  max-width: 1170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13rem;
+}
+
+.rights p {
+  font-size: 1.4rem;
+  line-height: 2.7rem;
+  color: var(--color-grey-1000);
+}
+
+.rights span {
+  color: var(--color-borders-titles);
+}
+
+.rights a {
+  color: var(--color-grey-1000);
 }
