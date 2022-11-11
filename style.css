@@ -1,10 +1,4 @@
 :root {
-  --color-background: #1c2027;
-  --color-borders-titles: #0a9c5180;
-  --color-divider-courses: #273041;
-  --color-divider-projects: #cfd7e4;
-  --color-description-project: #e0e3eb;
-
   --color-primary-100: #181a20;
   --color-primary-200: #1c1f26;
   --color-primary-300: #112240;
@@ -26,6 +20,13 @@
   --color-grey-800: #dcdfe6;
   --color-grey-900: #e5e8ef;
   --color-grey-1000: #f2f5fa;
+
+  --color-background: #1c2027;
+  --color-borders-titles: #0a9c5180;
+  --color-divider-courses: #273041;
+  --color-divider-projects: #cfd7e4;
+  --color-description-project: #e0e3eb;
+  --color-border-form: #313948;
 }
 
 * {
@@ -54,7 +55,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* z-index: 1; */
 }
 
 .menu {
@@ -111,29 +111,16 @@ nav {
   color: var(--color-grey-1000);
 }
 
-.languages .laguages-divider {
+.languages .languages-divider {
   width: 0.2rem;
   height: 2rem;
   background-color: var(--color-grey-1000);
 }
 
-/* .contact {
-  display: flex;
-  gap: 2.4rem;
-}
-
-.contact a {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-
-  font-size: 1.4rem;
-  text-decoration: none;
-  color: var(--color-grey-1000);
-} */
-
 /* --------- SECTION - PRESENTATION --------- */
 .presentation {
+  position: relative;
+
   height: calc(100vh - 8rem);
   display: flex;
   flex-direction: column;
@@ -143,30 +130,28 @@ nav {
 }
 
 .rectangle-left-presentation {
+  width: 100%;
+  object-fit: cover;
+
   position: absolute;
-  /* top: 80px; */
-  top: 60px;
-  left: -20px;
+  top: 0;
+  left: 0;
 }
 
 .rectangle-right-presentation {
   position: absolute;
-  rotate: 360deg;
-  /* top: 80px; */
-  top: 60px;
-  right: -35px;
+  top: 0;
+  right: 0;
 }
 
 .presentation .container {
   width: 100%;
   max-width: 1170px;
 
-  /* display: flex;
-  align-items: center;
-  gap: 8rem; */
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 8rem;
+  z-index: 1;
 }
 
 .tag-default {
@@ -236,10 +221,6 @@ nav {
   color: var(--color-primary-200);
 }
 
-/* .presentation-image {
-  z-index: 0;
-} */
-
 .mouse-line {
   display: flex;
   flex-direction: column;
@@ -251,12 +232,26 @@ nav {
 
 /* --------- SECTION - PRESENTATION --------- */
 .about-me {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   height: 75rem;
   background-color: var(--color-primary-200);
+}
+
+.rectangle-left-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rectangle-right-about {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .about-me .container {
@@ -266,7 +261,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 13rem;
-  /* display: flex; */
+  z-index: 1;
 }
 
 .images {
@@ -326,11 +321,6 @@ nav {
   justify-content: center;
   gap: 7rem;
 
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7rem; */
-
   height: 12.5rem;
   background-color: var(--color-primary-100);
 }
@@ -357,7 +347,6 @@ nav {
 }
 
 .graduations .title {
-  /* align-self: center; */
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 2.7rem;
@@ -377,7 +366,6 @@ nav {
   grid-template-columns: 10vw 4vw 40vw;
   grid-template-rows: 6vh 35vh 6vh 35vh 6vh 35vh;
   gap: 0 8rem;
-  /* grid-auto-flow: row; */
   grid-template-areas:
     "place-fimca icon-fimca degree-fimca"
     ". . description-fimca"
@@ -410,8 +398,6 @@ nav {
 }
 
 .degree-title {
-  /* margin-bottom: 2.2rem; */
-
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -476,31 +462,45 @@ nav {
 }
 .timeline {
   display: flex;
-  /* align-self: center; */
   justify-content: center;
   grid-area: 2 / 2 / 5 / 3;
 }
 
 /* --------- SECTION - COURSES --------- */
 .courses {
+  position: relative;
+
   display: flex;
   justify-content: center;
-
-  /* height: 37rem; */
   background-color: var(--color-primary-100);
+}
+
+.rectangle-left-courses {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.rectangle-right-courses {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .courses .container {
   width: 100%;
   max-width: 1170px;
-  justify-content: center;
+
   margin: 9.7rem 0;
+  justify-content: center;
+  align-items: center;
 
   display: grid;
   grid-template-columns: 33rem 6rem 33rem;
   grid-template-rows: repeat(2, 26rem);
   gap: 50px 100px;
-  align-items: center;
+
+  z-index: 1;
 }
 
 .course {
@@ -514,14 +514,6 @@ nav {
 .course img {
   margin-bottom: 2.4rem;
 }
-
-/* .course h4 {
-  margin-bottom: 1.6rem;
-  text-align: center;
-  font-size: 2.4rem;
-  line-height: 2.7rem;
-  color: var(--color-grey-1000);
-} */
 
 .course-title {
   margin-bottom: 2.2rem;
@@ -563,7 +555,6 @@ nav {
 .projects {
   display: flex;
   justify-content: center;
-  /* height: 100rem; */
   background-color: var(--color-grey-900);
 }
 
@@ -618,7 +609,6 @@ nav {
 }
 
 .project .description-project {
-  /* width: 57rem; */
   padding: 3.2rem;
   margin-bottom: 1rem;
   border-radius: 1.6rem;
@@ -676,11 +666,25 @@ nav {
 /* --------- SECTION - CONTACT --------- */
 
 .contact {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
   height: 85rem;
   background-color: var(--color-primary-200);
+}
+
+.rectangle-left-contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rectangle-right-contact {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .contact .container {
@@ -689,6 +693,8 @@ nav {
 
   display: flex;
   gap: 0 13rem;
+
+  z-index: 1;
 }
 
 .description-contact {
@@ -709,20 +715,17 @@ nav {
 .description-contact p {
   margin: 2.4rem 0;
 
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 27px;
-  /* or 193% */
-
+  font-size: 1.4rem;
+  line-height: 2.7rem;
   color: var(--color-grey-700);
 }
 
 /* ------ Form ------ */
 .contact form {
   display: grid;
-  grid-template-columns: 277px 277px;
-  grid-template-rows: 55px 55px 149px 55px;
-  gap: 16px;
+  grid-template-columns: 27.7rem 27.7rem;
+  grid-template-rows: 5.5rem 5.5rem 14.9rem 5.5rem;
+  gap: 1.6rem;
   grid-template-areas:
     "name email"
     "phone subject"
@@ -731,37 +734,31 @@ nav {
 }
 
 .contact .inputs {
-  padding: 14px 10px;
+  padding: 1.4rem 1rem;
   background: transparent;
-  border: 1px solid #313948;
-  border-radius: 6px;
+  border-radius: 0.6rem;
+  border: 1px solid var(--color-border-form);
   color: var(--color-grey-1000);
 }
 
 #name {
   grid-area: name;
 }
-
 #email {
   grid-area: email;
 }
-
 #phone {
   grid-area: phone;
 }
-
 #subject {
   grid-area: subject;
 }
-
 #message {
   grid-area: message;
   resize: none;
 }
-
 .btn-send-message {
   grid-area: button;
-  /* width: 57rem; */
   cursor: pointer;
 
   display: flex;
