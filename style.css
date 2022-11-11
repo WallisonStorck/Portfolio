@@ -38,10 +38,18 @@
 
 html {
   font-size: 62.5%; /* font-size 1rem = 10px on default browser settings */
+  scroll-behavior: smooth; /* Scroll suave ao mudar de section */
 }
 
 /* --------- HEADER --------- */
 header {
+  width: 100%;
+  position: fixed;
+  height: 8rem;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
   display: flex;
   justify-content: center;
   background-color: var(--color-background);
@@ -51,7 +59,6 @@ nav {
   width: 100%;
   max-width: 1170px;
 
-  height: 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,9 +70,16 @@ nav {
   gap: 6.4rem;
 }
 
-.links a {
-  margin: 0 2rem;
+.links ul {
+  display: flex;
+  gap: 5.5rem;
+}
 
+.links li {
+  list-style: none;
+}
+
+.links li a {
   text-decoration: none;
   font-size: 1.4rem;
   color: var(--color-grey-1000);
@@ -120,6 +134,7 @@ nav {
 /* --------- SECTION - PRESENTATION --------- */
 .presentation {
   position: relative;
+  margin-top: 8rem;
 
   height: calc(100vh - 8rem);
   display: flex;
@@ -210,6 +225,7 @@ nav {
 }
 
 .btn-portfolio {
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -219,6 +235,22 @@ nav {
   border: transparent;
   background-color: transparent;
   color: var(--color-primary-200);
+}
+
+.btn-portfolio::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 1%;
+  border-radius: 5px;
+  bottom: 15px;
+  transition: all 0.5s ease;
+  background: var(--color-black-400);
+}
+
+.btn-portfolio:hover::before {
+  width: 90%;
+  /* background: var(--color-black-100); */
 }
 
 .mouse-line {
@@ -311,6 +343,15 @@ nav {
   text-decoration: none;
   font-size: 1.6rem;
   color: var(--color-grey-1000);
+}
+
+.buttons-social-networks ul {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.buttons-social-networks li {
+  list-style: none;
 }
 
 /* --------- SECTION - TOOLS --------- */
@@ -644,6 +685,7 @@ nav {
 }
 
 .details-project .btn-access-project {
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -654,6 +696,22 @@ nav {
   border: transparent;
   background-color: transparent;
   color: var(--color-primary-200);
+}
+
+.btn-access-project::before {
+  position: absolute;
+  content: "";
+  left: 3.5rem;
+  width: 0;
+  height: 1%;
+  border-radius: 5px;
+  bottom: 7px;
+  transition: all 0.5s ease;
+  background: var(--color-black-400);
+}
+
+.btn-access-project:hover::before {
+  width: 69%;
 }
 
 .divider-project {
@@ -701,7 +759,7 @@ nav {
   width: 47rem;
 }
 
-.description-contact img {
+.description-contact > img {
   width: 5.3rem;
   margin-bottom: 1.3rem;
 }
@@ -802,5 +860,6 @@ footer .container {
 }
 
 .rights a {
+  text-decoration: none;
   color: var(--color-grey-1000);
 }
