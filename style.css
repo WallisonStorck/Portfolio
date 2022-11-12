@@ -53,6 +53,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: var(--color-background);
+  box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.15);
 }
 
 nav {
@@ -79,10 +80,36 @@ nav {
   list-style: none;
 }
 
-.links li a {
+.links .link {
+  position: relative;
+
+  margin-bottom: 1.2rem;
   text-decoration: none;
   font-size: 1.4rem;
   color: var(--color-grey-1000);
+}
+
+.links .link::before {
+  position: absolute;
+
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  border-radius: 5px;
+
+  transition: all 0.5s ease;
+  background-color: var(--color-secondary-100);
+}
+
+.links .link:hover::before {
+  width: 100%;
+}
+
+.links .link:active {
+  font-weight: 700;
+  color: var(--color-secondary-100);
 }
 
 .language-networks {
@@ -404,8 +431,8 @@ nav {
 .history {
   padding-left: 25rem;
   display: grid;
-  grid-template-columns: 10vw 4vw 40vw;
-  grid-template-rows: 6vh 35vh 6vh 35vh 6vh 35vh;
+  grid-template-columns: 12vw 4vw 45vw;
+  grid-template-rows: 5vh 35vh 5vh 35vh 5vh 35vh;
   gap: 0 8rem;
   grid-template-areas:
     "place-fimca icon-fimca degree-fimca"
@@ -856,10 +883,13 @@ footer .container {
 }
 
 .rights span {
-  color: var(--color-borders-titles);
+  color: var(--color-secondary-100);
 }
 
 .rights a {
   text-decoration: none;
   color: var(--color-grey-1000);
+}
+
+@media screen and (max-width: 390px) {
 }
