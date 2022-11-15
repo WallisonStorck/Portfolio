@@ -71,6 +71,11 @@ nav {
   gap: 6.4rem;
 }
 
+.menu .side-menu {
+  display: none;
+  visibility: hidden;
+}
+
 .links ul {
   display: flex;
   gap: 5.5rem;
@@ -209,7 +214,6 @@ nav {
 .presentation-description h3 {
   font-weight: 400;
   font-size: 4.8rem;
-  /* line-height: 6.3rem; */
   letter-spacing: -0.04em;
   color: var(--color-black-100);
 }
@@ -281,6 +285,7 @@ nav {
 }
 
 .mouse-line {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -324,6 +329,8 @@ nav {
 }
 
 .images {
+  padding: 2.8rem 0;
+
   display: flex;
   gap: 3rem;
 }
@@ -383,14 +390,19 @@ nav {
 
 /* --------- SECTION - TOOLS --------- */
 .tools {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--color-primary-100);
+}
+
+.tools .container {
   display: grid;
   grid-template-columns: repeat(5, 5rem);
   align-items: center;
   justify-content: center;
   gap: 7rem;
-
   height: 12.5rem;
-  background-color: var(--color-primary-100);
 }
 
 .tools img {
@@ -606,8 +618,8 @@ nav {
 
 .course p {
   text-align: center;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 1.4rem;
+  line-height: 2.7rem;
   color: var(--color-grey-600);
 }
 
@@ -887,9 +899,269 @@ footer .container {
 }
 
 .rights a {
-  text-decoration: none;
+  ''text-decoration: none;
   color: var(--color-grey-1000);
 }
 
-@media screen and (max-width: 390px) {
+/* ---------------- MEDIA SCREENS ---------------- */
+@media screen and (max-width: 385px) {
+  /* ------ HEADER ------ */
+  .links,
+  .language-networks {
+    display: none;
+    visibility: hidden;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
+
+  .menu .side-menu {
+    display: initial;
+    visibility: visible;
+  }
+
+  .menu {
+    gap: 20rem;
+  }
+
+  .logo img {
+    width: 71.67px;
+    height: 24px;
+  }
+
+  /* ------ PRESENTATION ------ */
+  .rectangle-left-presentation,
+  .rectangle-right-presentation,
+  .presentation-image,
+  .mouse-line {
+    display: none;
+    visibility: hidden;
+  }
+
+  .presentation .container {
+    width: 100%;
+    max-width: 306px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presentation-description h6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .presentation-description h3 {
+    font-size: 2.4rem;
+    line-height: 2.7rem;
+  }
+
+  .presentation-description h1 {
+    font-size: 3.2rem;
+    line-height: 6.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .presentation-description p {
+    width: 30rem;
+    margin-bottom: 2.3rem;
+
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0;
+  }
+
+  .description-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .mouse-line {
+    /* width: 32px;
+    height: 107px; */
+  }
+
+  /* ------ ABOUT-ME ------ */
+  .rectangle-left-about,
+  .rectangle-right-about,
+  .images {
+    display: none;
+    visibility: hidden;
+  }
+
+  .about-me {
+    height: 100%;
+  }
+
+  .about-me .container {
+    width: 100%;
+    max-width: 306px;
+    margin-top: 6.8rem;
+    margin-bottom: 6.1rem;
+
+    grid-template-columns: 1fr;
+  }
+
+  .about-me .description h4 {
+    font-size: 3.2rem;
+  }
+
+  .buttons-contact-cv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* ------ TOOLS ------ */
+  .tools .container {
+    width: 100%;
+    max-width: 306px;
+
+    grid-template-columns: repeat(5, 2.8rem);
+    gap: 3.4rem;
+    height: 12.3rem;
+  }
+
+  .tools img {
+    width: 28px;
+  }
+
+  /* ------ GRADUATIONS ------ */
+  .graduations .container {
+    padding-top: 7rem;
+
+    width: 100%;
+    max-width: 306px;
+
+    align-items: flex-start;
+  }
+
+  .graduations .subtitle {
+    font-size: 3.1rem;
+    text-align: center;
+    margin-bottom: 4.8rem;
+  }
+
+  .history {
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0.8rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "icon-fimca"
+      "place-fimca"
+      "degree-fimca"
+      "description-fimca"
+      "icon-ipog"
+      "place-ipog"
+      "degree-ipog"
+      "description-ipog"
+      "icon-ulbra"
+      "place-ulbra"
+      "degree-ulbra"
+      "description-ulbra";
+  }
+
+  /* prettier-ignore-start */
+  .place-fimca {
+    grid-area: place-fimca;
+  }
+  .icon-fimca {
+    grid-area: icon-fimca;
+  }
+  .degree-fimca {
+    grid-area: degree-fimca;
+  }
+  .description-fimca {
+    grid-area: description-fimca;
+  }
+  .icon-ipog {
+    grid-area: icon-ipog;
+  }
+  .place-ipog {
+    grid-area: place-ipog;
+  }
+  .degree-ipog {
+    grid-area: degree-ipog;
+  }
+  .description-ipog {
+    grid-area: description-ipog;
+  }
+  .icon-ulbra {
+    grid-area: icon-ulbra;
+  }
+  .place-ulbra {
+    grid-area: place-ulbra;
+  }
+  .degree-ulbra {
+    grid-area: degree-ulbra;
+  }
+  .description-ulbra {
+    grid-area: description-ulbra;
+  }
+  /* prettier-ignore-end */
+
+  .timeline {
+    display: none;
+    visibility: hidden;
+  }
+
+  .icon-degrees {
+    justify-self: auto;
+  }
+
+  .place {
+    align-items: flex-start;
+  }
+
+  .degree h5 {
+    font-weight: 700;
+    line-height: 3.7rem;
+  }
+
+  .history .description p {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  /* ------ COURSES ------ */
+  .rectangle-left-courses,
+  .rectangle-right-courses,
+  .line {
+    display: none;
+    visibility: hidden;
+  }
+
+  .courses .container {
+    width: 100%;
+    max-width: 306px;
+    margin: 8.8rem 0 6.1rem 0;
+
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  .course {
+    width: 100%;
+  }
+
+  /* DESATIVADOS PARA TESTES */
+  .projects,
+  .contact,
+  footer {
+    display: none;
+    visibility: hidden;
+  }
 }
