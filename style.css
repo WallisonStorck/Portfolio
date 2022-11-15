@@ -444,7 +444,7 @@ nav {
   padding-left: 25rem;
   display: grid;
   grid-template-columns: 12vw 4vw 45vw;
-  grid-template-rows: 5vh 35vh 5vh 35vh 5vh 35vh;
+  grid-template-rows: 6vh 35vh 6vh 35vh 6vh 35vh;
   gap: 0 8rem;
   grid-template-areas:
     "place-fimca icon-fimca degree-fimca"
@@ -904,7 +904,7 @@ footer .container {
 }
 
 /* ---------------- MEDIA SCREENS ---------------- */
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 414px) {
   /* ------ HEADER ------ */
   .links,
   .language-networks {
