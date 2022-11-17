@@ -658,6 +658,7 @@ nav {
 }
 
 .projects .subtitle {
+  text-align: center;
   font-size: 4rem;
   line-height: 6.2rem;
   color: var(--color-primary-200);
@@ -838,6 +839,10 @@ nav {
   color: var(--color-grey-1000);
 }
 
+.contact .inputs::placeholder {
+  color: var(--color-grey-800);
+}
+
 #name {
   grid-area: name;
 }
@@ -899,12 +904,12 @@ footer .container {
 }
 
 .rights a {
-  ''text-decoration: none;
+  text-decoration: none;
   color: var(--color-grey-1000);
 }
 
 /* ---------------- MEDIA SCREENS ---------------- */
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 480px) {
   /* ------ HEADER ------ */
   .links,
   .language-networks {
@@ -912,8 +917,15 @@ footer .container {
     visibility: hidden;
   }
 
+  header {
+    align-items: center;
+    justify-content: initial;
+  }
+
   nav {
-    justify-content: space-around;
+    display: initial;
+    padding: 0 35px;
+    justify-content: space-between;
   }
 
   .menu .side-menu {
@@ -922,7 +934,7 @@ footer .container {
   }
 
   .menu {
-    gap: 20rem;
+    justify-content: space-between;
   }
 
   .logo img {
@@ -939,10 +951,12 @@ footer .container {
     visibility: hidden;
   }
 
+  .presentation {
+    padding: 0 35px;
+  }
+
   .presentation .container {
     width: 100%;
-    max-width: 306px;
-
     grid-template-columns: 1fr;
   }
 
@@ -952,23 +966,24 @@ footer .container {
     align-items: center;
   }
 
-  .presentation-description h6 {
-    margin-bottom: 1.5rem;
+  .tag-default {
+    font-size: 1.2rem;
   }
 
   .presentation-description h3 {
     font-size: 2.4rem;
     line-height: 2.7rem;
+    margin: 1.6rem 0;
   }
 
   .presentation-description h1 {
-    font-size: 3.2rem;
+    text-align: center;
+    font-size: 4.8rem;
     line-height: 6.2rem;
     margin-bottom: 0.8rem;
   }
 
   .presentation-description p {
-    width: 30rem;
     margin-bottom: 2.3rem;
 
     text-align: center;
@@ -1003,7 +1018,7 @@ footer .container {
 
   .about-me .container {
     width: 100%;
-    max-width: 306px;
+    padding: 0 35px;
     margin-top: 6.8rem;
     margin-bottom: 6.1rem;
 
@@ -1015,8 +1030,8 @@ footer .container {
   }
 
   .buttons-contact-cv {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   /* ------ TOOLS ------ */
@@ -1035,11 +1050,8 @@ footer .container {
 
   /* ------ GRADUATIONS ------ */
   .graduations .container {
-    padding-top: 7rem;
-
     width: 100%;
-    max-width: 306px;
-
+    padding: 7rem 35px 0 35px;
     align-items: flex-start;
   }
 
@@ -1146,7 +1158,7 @@ footer .container {
 
   .courses .container {
     width: 100%;
-    max-width: 306px;
+    padding: 0 35px;
     margin: 8.8rem 0 6.1rem 0;
 
     grid-template-columns: 1fr;
@@ -1157,11 +1169,98 @@ footer .container {
     width: 100%;
   }
 
-  /* DESATIVADOS PARA TESTES */
-  .projects,
-  .contact,
-  footer {
+  /* ------ PROJECTS ------ */
+  .projects .container {
+    width: 100%;
+    padding: 0 35px;
+    margin-top: 4rem;
+    margin-bottom: 4.7rem;
+  }
+
+  .project {
+    margin: 8rem 0;
+    flex-direction: column;
+  }
+
+  .project > img {
+    width: 305.11px;
+    height: 177.29px;
+  }
+
+  .projects .subtitle {
+    font-size: 3.2rem;
+  }
+
+  .container-project .details-project {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.2rem;
+  }
+
+  .projects .btn-green {
+    padding: 16px 21px;
+  }
+
+  /* ------ CONTACT ------ */
+  .rectangle-left-contact,
+  .rectangle-right-contact {
     display: none;
     visibility: hidden;
+  }
+
+  .contact {
+    height: 100%;
+  }
+
+  .contact .container {
+    padding: 85px 35px 78px 35px;
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+
+  .description-contact {
+    width: 100%;
+  }
+
+  .contact form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5.5rem 5.5rem 5.5rem 5.5rem 14.9rem;
+    grid-template-areas:
+      "name"
+      "email"
+      "phone"
+      "subject"
+      "message"
+      "button";
+  }
+
+  /* ------ FORM ------ */
+  footer {
+    height: 100%;
+  }
+
+  footer .container {
+    padding: 31px 35px;
+    gap: 5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "buttons"
+      "rights";
+    justify-items: center;
+  }
+
+  .rights {
+    grid-area: rights;
+  }
+
+  .buttons-social-networks {
+    grid-area: buttons;
+  }
+
+  .rights p {
+    font-size: 1.2rem;
+    text-align: center;
   }
 }
