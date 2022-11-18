@@ -18,6 +18,7 @@
   --color-grey-600: #abaeb3;
   --color-grey-700: #c4c6cc;
   --color-grey-800: #dcdfe6;
+  --color-grey-850: #dee1e8;
   --color-grey-900: #e5e8ef;
   --color-grey-1000: #f2f5fa;
 
@@ -25,7 +26,6 @@
   --color-borders-titles: #0a9c5180;
   --color-divider-courses: #273041;
   --color-divider-projects: #cfd7e4;
-  --color-description-project: #e0e3eb;
   --color-border-form: #313948;
 }
 
@@ -302,7 +302,6 @@ nav {
   align-items: center;
   justify-content: space-around;
 
-  height: 75rem;
   background-color: var(--color-primary-200);
 }
 
@@ -321,6 +320,7 @@ nav {
 .about-me .container {
   width: 100%;
   max-width: 1170px;
+  padding: 9rem 0;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -397,12 +397,13 @@ nav {
 }
 
 .tools .container {
+  padding: 4rem 0;
+
   display: grid;
   grid-template-columns: repeat(5, 5rem);
   align-items: center;
   justify-content: center;
   gap: 7rem;
-  height: 12.5rem;
 }
 
 .tools img {
@@ -444,7 +445,7 @@ nav {
   padding-left: 25rem;
   display: grid;
   grid-template-columns: 12vw 4vw 45vw;
-  grid-template-rows: 6vh 35vh 6vh 35vh 6vh 35vh;
+  grid-template-rows: 5vh 35vh 5vh 35vh 5vh 35vh;
   gap: 0 8rem;
   grid-template-areas:
     "place-fimca icon-fimca degree-fimca"
@@ -571,7 +572,7 @@ nav {
   width: 100%;
   max-width: 1170px;
 
-  margin: 9.7rem 0;
+  padding: 9rem 0;
   justify-content: center;
   align-items: center;
 
@@ -591,12 +592,8 @@ nav {
   align-items: center;
 }
 
-.course img {
-  margin-bottom: 2.4rem;
-}
-
 .course-title {
-  margin-bottom: 2.2rem;
+  margin: 2.2rem 0;
 
   display: flex;
   flex-direction: column;
@@ -642,8 +639,8 @@ nav {
   width: 100%;
   max-width: 1170px;
 
-  margin-top: 13rem;
-  margin-bottom: 7.8rem;
+  padding-top: 13rem;
+  padding-bottom: 7.8rem;
 
   display: flex;
   flex-direction: column;
@@ -665,10 +662,21 @@ nav {
 }
 
 .project {
-  display: flex;
-  gap: 5.4rem;
-  margin: 16rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "first second";
+  margin: 15rem 0;
   align-items: center;
+}
+
+.first-quadrant {
+  grid-area: first;
+  justify-self: start;
+}
+
+.second-quadrant {
+  grid-area: second;
+  justify-self: end;
 }
 
 .project .container-project {
@@ -693,7 +701,7 @@ nav {
   padding: 3.2rem;
   margin-bottom: 1rem;
   border-radius: 1.6rem;
-  background-color: var(--color-description-project);
+  background-color: var(--color-grey-850);
 
   display: flex;
   flex-direction: column;
@@ -769,7 +777,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85rem;
   background-color: var(--color-primary-200);
 }
 
@@ -777,17 +784,20 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+  /* right: 1184px; */
 }
 
 .rectangle-right-contact {
   position: absolute;
   top: 0;
   right: 0;
+  /* left: 1523px; */
 }
 
 .contact .container {
   width: 100%;
   max-width: 1170px;
+  padding: 24rem 0;
 
   display: flex;
   gap: 0 13rem;
@@ -801,6 +811,7 @@ nav {
 
 .description-contact > img {
   width: 5.3rem;
+  margin-left: 1.3rem;
   margin-bottom: 1.3rem;
 }
 
@@ -906,361 +917,4 @@ footer .container {
 .rights a {
   text-decoration: none;
   color: var(--color-grey-1000);
-}
-
-/* ---------------- MEDIA SCREENS ---------------- */
-@media screen and (max-width: 480px) {
-  /* ------ HEADER ------ */
-  .links,
-  .language-networks {
-    display: none;
-    visibility: hidden;
-  }
-
-  header {
-    align-items: center;
-    justify-content: initial;
-  }
-
-  nav {
-    display: initial;
-    padding: 0 35px;
-    justify-content: space-between;
-  }
-
-  .menu .side-menu {
-    display: initial;
-    visibility: visible;
-  }
-
-  .menu {
-    justify-content: space-between;
-  }
-
-  .logo img {
-    width: 71.67px;
-    height: 24px;
-  }
-
-  /* ------ PRESENTATION ------ */
-  .rectangle-left-presentation,
-  .rectangle-right-presentation,
-  .presentation-image,
-  .mouse-line {
-    display: none;
-    visibility: hidden;
-  }
-
-  .presentation {
-    padding: 0 35px;
-  }
-
-  .presentation .container {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-
-  .presentation-description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tag-default {
-    font-size: 1.2rem;
-  }
-
-  .presentation-description h3 {
-    font-size: 2.4rem;
-    line-height: 2.7rem;
-    margin: 1.6rem 0;
-  }
-
-  .presentation-description h1 {
-    text-align: center;
-    font-size: 4.8rem;
-    line-height: 6.2rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .presentation-description p {
-    margin-bottom: 2.3rem;
-
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 3rem;
-    letter-spacing: 0;
-  }
-
-  .description-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-  }
-
-  .mouse-line {
-    /* width: 32px;
-    height: 107px; */
-  }
-
-  /* ------ ABOUT-ME ------ */
-  .rectangle-left-about,
-  .rectangle-right-about,
-  .images {
-    display: none;
-    visibility: hidden;
-  }
-
-  .about-me {
-    height: 100%;
-  }
-
-  .about-me .container {
-    width: 100%;
-    padding: 0 35px;
-    margin-top: 6.8rem;
-    margin-bottom: 6.1rem;
-
-    grid-template-columns: 1fr;
-  }
-
-  .about-me .description h4 {
-    font-size: 3.2rem;
-  }
-
-  .buttons-contact-cv {
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  /* ------ TOOLS ------ */
-  .tools .container {
-    width: 100%;
-    max-width: 306px;
-
-    grid-template-columns: repeat(5, 2.8rem);
-    gap: 3.4rem;
-    height: 12.3rem;
-  }
-
-  .tools img {
-    width: 28px;
-  }
-
-  /* ------ GRADUATIONS ------ */
-  .graduations .container {
-    width: 100%;
-    padding: 7rem 35px 0 35px;
-    align-items: flex-start;
-  }
-
-  .graduations .subtitle {
-    font-size: 3.1rem;
-    text-align: center;
-    margin-bottom: 4.8rem;
-  }
-
-  .history {
-    padding: 0;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 0.8rem;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "icon-fimca"
-      "place-fimca"
-      "degree-fimca"
-      "description-fimca"
-      "icon-ipog"
-      "place-ipog"
-      "degree-ipog"
-      "description-ipog"
-      "icon-ulbra"
-      "place-ulbra"
-      "degree-ulbra"
-      "description-ulbra";
-  }
-
-  /* prettier-ignore-start */
-  .place-fimca {
-    grid-area: place-fimca;
-  }
-  .icon-fimca {
-    grid-area: icon-fimca;
-  }
-  .degree-fimca {
-    grid-area: degree-fimca;
-  }
-  .description-fimca {
-    grid-area: description-fimca;
-  }
-  .icon-ipog {
-    grid-area: icon-ipog;
-  }
-  .place-ipog {
-    grid-area: place-ipog;
-  }
-  .degree-ipog {
-    grid-area: degree-ipog;
-  }
-  .description-ipog {
-    grid-area: description-ipog;
-  }
-  .icon-ulbra {
-    grid-area: icon-ulbra;
-  }
-  .place-ulbra {
-    grid-area: place-ulbra;
-  }
-  .degree-ulbra {
-    grid-area: degree-ulbra;
-  }
-  .description-ulbra {
-    grid-area: description-ulbra;
-  }
-  /* prettier-ignore-end */
-
-  .timeline {
-    display: none;
-    visibility: hidden;
-  }
-
-  .icon-degrees {
-    justify-self: auto;
-  }
-
-  .place {
-    align-items: flex-start;
-  }
-
-  .degree h5 {
-    font-weight: 700;
-    line-height: 3.7rem;
-  }
-
-  .history .description p {
-    width: 100%;
-    margin-bottom: 4rem;
-  }
-
-  /* ------ COURSES ------ */
-  .rectangle-left-courses,
-  .rectangle-right-courses,
-  .line {
-    display: none;
-    visibility: hidden;
-  }
-
-  .courses .container {
-    width: 100%;
-    padding: 0 35px;
-    margin: 8.8rem 0 6.1rem 0;
-
-    grid-template-columns: 1fr;
-    gap: 6.4rem;
-  }
-
-  .course {
-    width: 100%;
-  }
-
-  /* ------ PROJECTS ------ */
-  .projects .container {
-    width: 100%;
-    padding: 0 35px;
-    margin-top: 4rem;
-    margin-bottom: 4.7rem;
-  }
-
-  .project {
-    margin: 8rem 0;
-    flex-direction: column;
-  }
-
-  .project > img {
-    width: 305.11px;
-    height: 177.29px;
-  }
-
-  .projects .subtitle {
-    font-size: 3.2rem;
-  }
-
-  .container-project .details-project {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.2rem;
-  }
-
-  .projects .btn-green {
-    padding: 16px 21px;
-  }
-
-  /* ------ CONTACT ------ */
-  .rectangle-left-contact,
-  .rectangle-right-contact {
-    display: none;
-    visibility: hidden;
-  }
-
-  .contact {
-    height: 100%;
-  }
-
-  .contact .container {
-    padding: 85px 35px 78px 35px;
-    flex-direction: column;
-    gap: 5.6rem;
-  }
-
-  .description-contact {
-    width: 100%;
-  }
-
-  .contact form {
-    grid-template-columns: 1fr;
-    grid-template-rows: 5.5rem 5.5rem 5.5rem 5.5rem 14.9rem;
-    grid-template-areas:
-      "name"
-      "email"
-      "phone"
-      "subject"
-      "message"
-      "button";
-  }
-
-  /* ------ FORM ------ */
-  footer {
-    height: 100%;
-  }
-
-  footer .container {
-    padding: 31px 35px;
-    gap: 5rem;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "buttons"
-      "rights";
-    justify-items: center;
-  }
-
-  .rights {
-    grid-area: rights;
-  }
-
-  .buttons-social-networks {
-    grid-area: buttons;
-  }
-
-  .rights p {
-    font-size: 1.2rem;
-    text-align: center;
-  }
 }

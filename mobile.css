@@ -1,0 +1,391 @@
+/* ---------------- MEDIA SCREENS ---------------- */
+@media screen and (max-width: 480px) {
+  /* ------ HEADER ------ */
+  .links,
+  .language-networks {
+    display: none;
+    visibility: hidden;
+  }
+
+  header {
+    align-items: center;
+    justify-content: initial;
+  }
+
+  nav {
+    display: initial;
+    padding: 0 35px;
+    justify-content: space-between;
+  }
+
+  .menu .side-menu {
+    display: initial;
+    visibility: visible;
+  }
+
+  .menu {
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 71.67px;
+    height: 24px;
+  }
+
+  /* ------ PRESENTATION ------ */
+  .rectangle-left-presentation,
+  .rectangle-right-presentation,
+  .presentation-image,
+  .mouse-line {
+    display: none;
+    visibility: hidden;
+  }
+
+  .presentation {
+    padding: 0 35px;
+  }
+
+  .presentation .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tag-default {
+    font-size: 1.2rem;
+  }
+
+  .presentation-description h3 {
+    font-size: 2.4rem;
+    line-height: 2.7rem;
+    margin: 1.5rem 0;
+  }
+
+  .presentation-description h1 {
+    text-align: center;
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .presentation-description p {
+    margin-bottom: 2.3rem;
+
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0;
+  }
+
+  .description-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  /* ------ ABOUT-ME ------ */
+  .rectangle-left-about,
+  .rectangle-right-about,
+  .images {
+    display: none;
+    visibility: hidden;
+  }
+
+  .about-me .container {
+    width: 100%;
+    padding: 6.8rem 3.5rem 6.1rem 3.5rem;
+
+    grid-template-columns: 1fr;
+  }
+
+  .about-me .description h4 {
+    font-size: 3.2rem;
+  }
+
+  .buttons-contact-cv {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* ------ TOOLS ------ */
+  .tools .container {
+    width: 100%;
+    max-width: 306px;
+
+    grid-template-columns: repeat(5, 2.8rem);
+    gap: 3.4rem;
+    height: 12rem;
+  }
+
+  .tools img {
+    width: 28px;
+  }
+
+  /* ------ GRADUATIONS ------ */
+  .graduations .container {
+    width: 100%;
+    padding: 7rem 35px 0 35px;
+    align-items: flex-start;
+  }
+
+  .graduations .subtitle {
+    font-size: 3.1rem;
+    margin-bottom: 4.8rem;
+  }
+
+  .history {
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0.8rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "icon-fimca"
+      "place-fimca"
+      "degree-fimca"
+      "description-fimca"
+      "icon-ipog"
+      "place-ipog"
+      "degree-ipog"
+      "description-ipog"
+      "icon-ulbra"
+      "place-ulbra"
+      "degree-ulbra"
+      "description-ulbra";
+  }
+
+  /* prettier-ignore-start */
+  .place-fimca {
+    grid-area: place-fimca;
+  }
+  .icon-fimca {
+    grid-area: icon-fimca;
+  }
+  .degree-fimca {
+    grid-area: degree-fimca;
+  }
+  .description-fimca {
+    grid-area: description-fimca;
+  }
+  .icon-ipog {
+    grid-area: icon-ipog;
+  }
+  .place-ipog {
+    grid-area: place-ipog;
+  }
+  .degree-ipog {
+    grid-area: degree-ipog;
+  }
+  .description-ipog {
+    grid-area: description-ipog;
+  }
+  .icon-ulbra {
+    grid-area: icon-ulbra;
+  }
+  .place-ulbra {
+    grid-area: place-ulbra;
+  }
+  .degree-ulbra {
+    grid-area: degree-ulbra;
+  }
+  .description-ulbra {
+    grid-area: description-ulbra;
+  }
+  /* prettier-ignore-end */
+
+  .timeline {
+    display: none;
+    visibility: hidden;
+  }
+
+  .icon-degrees {
+    justify-self: auto;
+  }
+
+  .place {
+    align-items: flex-start;
+  }
+
+  .degree h5 {
+    font-weight: 700;
+    line-height: 3.7rem;
+  }
+
+  .history .description p {
+    width: 100%;
+    margin-top: 2.2rem;
+    margin-bottom: 4rem;
+  }
+
+  /* ------ COURSES ------ */
+  .rectangle-left-courses,
+  .rectangle-right-courses,
+  .line {
+    display: none;
+    visibility: hidden;
+  }
+
+  .courses .container {
+    width: 100%;
+    padding: 6rem 3.5rem 6rem 3.5rem;
+
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  .course {
+    width: 100%;
+  }
+
+  /* ------ PROJECTS ------ */
+  .projects .container {
+    width: 100%;
+    padding: 0 35px;
+    padding-top: 4rem;
+    padding-bottom: 4.7rem;
+  }
+
+  .project {
+    margin: 8rem 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first"
+      "second";
+    gap: 5.6rem;
+    justify-items: center;
+  }
+
+  .first-quadrant {
+    grid-area: second;
+    justify-self: center;
+  } /* Inversion of quadrants */
+
+  .second-quadrant {
+    grid-area: first;
+    justify-self: center;
+  } /* Inversion of quadrants */
+
+  .project > img {
+    width: 305.11px;
+    height: 177.29px;
+  }
+
+  .projects .title {
+    align-self: flex-start;
+  }
+
+  .projects .subtitle {
+    font-size: 3.2rem;
+    align-self: flex-start;
+  }
+
+  .container-project .details-project {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.2rem;
+  }
+
+  .btn-access-project::before {
+    position: absolute;
+    content: "";
+    left: 3.5rem;
+    width: 0;
+    height: 1%;
+    border-radius: 5px;
+    bottom: 1px;
+    transition: all 0.5s ease;
+    background: var(--color-black-400);
+  }
+
+  .container-project > h6 {
+    right: auto;
+  }
+
+  .projects .btn-green {
+    padding: 16px 21px;
+  }
+
+  /* ------ CONTACT ------ */
+  .rectangle-left-contact,
+  .rectangle-right-contact {
+    display: none;
+    visibility: hidden;
+  }
+
+  .contact {
+    height: 100%;
+  }
+
+  .contact .container {
+    padding: 85px 35px 78px 35px;
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+
+  .description-contact h2 {
+    font-size: 4.8rem;
+    letter-spacing: -0.04em;
+  }
+
+  .description-contact p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: -0.06em;
+  }
+
+  .description-contact {
+    width: 100%;
+  }
+
+  .contact form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 5.5rem 5.5rem 5.5rem 5.5rem 14.9rem;
+    grid-template-areas:
+      "name"
+      "email"
+      "phone"
+      "subject"
+      "message"
+      "button";
+  }
+
+  /* ------ FORM ------ */
+  footer {
+    height: 100%;
+  }
+
+  footer .container {
+    padding: 31px 35px;
+    gap: 5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "buttons"
+      "rights";
+    justify-items: center;
+  }
+
+  .rights {
+    grid-area: rights;
+  }
+
+  .buttons-social-networks {
+    grid-area: buttons;
+  }
+
+  .rights p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
