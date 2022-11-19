@@ -41,7 +41,7 @@ html {
   scroll-behavior: smooth; /* Scroll suave ao mudar de section */
 }
 
-/* --------- HEADER --------- */
+/* ------------------- HEADER ------------------- */
 header {
   width: 100%;
   position: fixed;
@@ -163,7 +163,7 @@ nav {
   background-color: var(--color-grey-1000);
 }
 
-/* --------- SECTION - PRESENTATION --------- */
+/* ------------------- SECTION - PRESENTATION ------------------- */
 .presentation {
   position: relative;
   margin-top: 8rem;
@@ -219,9 +219,7 @@ nav {
 }
 
 .presentation-description h1 {
-  /* font-weight: 700; */
   font-size: 6.4rem;
-  /* line-height: 8.4rem; */
   letter-spacing: -0.05em;
   color: var(--color-primary-200);
 }
@@ -294,7 +292,7 @@ nav {
   bottom: 0;
 }
 
-/* --------- SECTION - PRESENTATION --------- */
+/* ------------------- SECTION - PRESENTATION ------------------- */
 .about-me {
   position: relative;
 
@@ -388,7 +386,7 @@ nav {
   list-style: none;
 }
 
-/* --------- SECTION - TOOLS --------- */
+/* ------------------- SECTION - TOOLS ------------------- */
 .tools {
   display: flex;
   justify-content: center;
@@ -410,7 +408,7 @@ nav {
   justify-self: center;
 }
 
-/* --------- SECTION - GRADUATIONS --------- */
+/* ------------------- SECTION - GRADUATIONS ------------------- */
 .graduations {
   display: flex;
   justify-content: center;
@@ -544,10 +542,10 @@ nav {
 .timeline {
   display: flex;
   justify-content: center;
-  grid-area: 2 / 2 / 5 / 3;
+  grid-area: 1 / 2 / 5 / 3;
 }
 
-/* --------- SECTION - COURSES --------- */
+/* ------------------- SECTION - COURSES ------------------- */
 .courses {
   position: relative;
 
@@ -579,9 +577,25 @@ nav {
   display: grid;
   grid-template-columns: 33rem 6rem 33rem;
   grid-template-rows: repeat(2, 26rem);
+  grid-template-areas:
+    "alura-course . igti-course"
+    "dio-course . cloud-course";
   gap: 50px 100px;
 
   z-index: 1;
+}
+
+.alura-course {
+  grid-area: alura-course;
+}
+.igti-course {
+  grid-area: igti-course;
+}
+.dio-course {
+  grid-area: dio-course;
+}
+.cloud-course {
+  grid-area: cloud-course;
 }
 
 .course {
@@ -620,7 +634,7 @@ nav {
   color: var(--color-grey-600);
 }
 
-.courses .line {
+.courses .line-divider-course {
   margin: 0 3rem;
   width: 2px;
   height: 153px;
@@ -628,7 +642,7 @@ nav {
   background-color: var(--color-divider-courses);
 }
 
-/* --------- SECTION - PROJECTS --------- */
+/* ------------------- SECTION - PROJECTS ------------------- */
 .projects {
   display: flex;
   justify-content: center;
@@ -769,7 +783,7 @@ nav {
   background-color: var(--color-divider-projects);
 }
 
-/* --------- SECTION - CONTACT --------- */
+/* ------------------- SECTION - CONTACT ------------------- */
 
 .contact {
   position: relative;
@@ -799,15 +813,25 @@ nav {
   max-width: 1170px;
   padding: 24rem 0;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "description form";
   gap: 0 13rem;
 
   z-index: 1;
 }
 
 .description-contact {
-  width: 47rem;
+  grid-area: description;
 }
+
+.contact form {
+  grid-area: form;
+}
+
+/* .description-contact {
+  width: 47rem;
+} */
 
 .description-contact > img {
   width: 5.3rem;
@@ -829,7 +853,7 @@ nav {
   color: var(--color-grey-700);
 }
 
-/* ------ Form ------ */
+/* ---------- Form ---------- */
 .contact form {
   display: grid;
   grid-template-columns: 27.7rem 27.7rem;
@@ -885,7 +909,7 @@ nav {
   background: var(--color-secondary-100);
 }
 
-/* --------- FOOTER --------- */
+/* ------------------- FOOTER ------------------- */
 footer {
   display: flex;
   justify-content: center;
@@ -910,11 +934,16 @@ footer .container {
   color: var(--color-grey-1000);
 }
 
-.rights span {
+.rights span:nth-child(1) {
   color: var(--color-secondary-100);
 }
 
 .rights a {
   text-decoration: none;
   color: var(--color-grey-1000);
+}
+
+.languages {
+  display: none;
+  visibility: hidden;
 }

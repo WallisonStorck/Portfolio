@@ -1,0 +1,293 @@
+/* ---------------- MEDIA SCREENS TABLET ---------------- */
+/* @media screen and (max-width: 768px) { */
+@media (min-width: 720px) and (max-width: 1024px) {
+  /* ------ HEADER ------ */
+  header {
+    align-items: center;
+    justify-content: initial;
+  }
+
+  nav {
+    display: initial;
+    padding: 0 8.5rem;
+  }
+
+  .links,
+  .language-networks {
+    display: none;
+    visibility: hidden;
+  }
+
+  .menu .side-menu {
+    display: initial;
+    visibility: visible;
+  }
+
+  .menu {
+    gap: initial;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 95.56px;
+    height: 32px;
+  }
+
+  /* ------ PRESENTATION ------ */
+  .rectangle-left-presentation,
+  .rectangle-right-presentation,
+  .presentation-image,
+  .mouse-line {
+    display: none;
+    visibility: hidden;
+  }
+  .presentation .container {
+    padding: 0 8.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .tag-default {
+    margin-bottom: 0.8rem;
+  }
+
+  /* ------ ABOUT-ME ------ */
+  .rectangle-left-about,
+  .rectangle-right-about {
+    display: none;
+    visibility: hidden;
+  }
+
+  .about-me .container {
+    padding: 6.4rem 8.5rem 9.4rem 8.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "description"
+      "images";
+  }
+
+  .images {
+    grid-area: images;
+    padding: 0;
+  }
+
+  .description {
+    grid-area: description;
+  }
+
+  /* ------ TOOLS ------ */
+
+  /* ------ GRADUATIONS ------ */
+  .graduations .container {
+    padding: 9.6rem 8.5rem 5.4rem 8.5rem;
+  }
+
+  .history {
+    padding-left: 0;
+    /* display: grid; */
+    grid-template-columns: 20vw 10vw 50vw;
+    grid-template-rows: 5vh 30vh 5vh 30vh 5vh 30vh;
+    gap: 0;
+  }
+
+  .history .description p {
+    width: initial;
+    margin-top: 2.5rem;
+  }
+
+  /* .description-fimca,
+  .description-ipog,
+  p {
+    width: initial;
+    margin-top: 2.5rem;
+  } */
+
+  /* .description-ulbra p {
+    margin-top: 0;
+  } */
+
+  /* prettier-ignore-start */
+  .place-fimca {
+    grid-area: place-fimca;
+  }
+  .icon-fimca {
+    grid-area: icon-fimca;
+  }
+  .degree-fimca {
+    grid-area: degree-fimca;
+  }
+  .description-fimca {
+    grid-area: description-fimca;
+  }
+  .icon-ipog {
+    grid-area: icon-ipog;
+  }
+  .place-ipog {
+    grid-area: place-ipog;
+  }
+  .degree-ipog {
+    grid-area: degree-ipog;
+  }
+  .description-ipog {
+    grid-area: description-ipog;
+  }
+  .icon-ulbra {
+    grid-area: icon-ulbra;
+  }
+  .place-ulbra {
+    grid-area: place-ulbra;
+  }
+  .degree-ulbra {
+    grid-area: degree-ulbra;
+  }
+  .description-ulbra {
+    grid-area: description-ulbra;
+  }
+  /* prettier-ignore-end */
+
+  /* ------ COURSES ------ */
+  .rectangle-left-courses,
+  .rectangle-right-courses,
+  .line-divider-course {
+    display: none;
+    visibility: hidden;
+  }
+
+  .courses .container {
+    padding: 9.8rem 8.5rem;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 26rem);
+    grid-template-areas:
+      "alura-course igti-course"
+      "dio-course cloud-course";
+    gap: 5rem 3rem;
+  }
+
+  .alura-course {
+    grid-area: alura-course;
+  }
+  .igti-course {
+    grid-area: igti-course;
+  }
+  .dio-course {
+    grid-area: dio-course;
+  }
+  .cloud-course {
+    grid-area: cloud-course;
+  }
+
+  .course {
+    width: initial;
+  }
+
+  /* ------ PROJECTS ------ */
+  .projects .container {
+    padding: 9rem 8.5rem 5.5rem 8.5rem;
+  }
+
+  .project {
+    margin: 6.5rem 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first"
+      "second";
+    gap: 4.8rem;
+    justify-items: center;
+  }
+
+  .first-quadrant {
+    grid-area: second;
+    justify-self: center;
+  } /* Inversion of quadrants */
+
+  .second-quadrant {
+    grid-area: first;
+    justify-self: center;
+  } /* Inversion of quadrants */
+
+  /* ------ CONTACT ------ */
+  .rectangle-left-contact,
+  .rectangle-right-contact {
+    display: none;
+    visibility: hidden;
+  }
+
+  .contact .container {
+    padding: 7rem 8.5rem;
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "description"
+      "form";
+    gap: 5.5rem;
+  }
+
+  .description-contact {
+    grid-area: description;
+  }
+
+  .description-contact p {
+    margin: 2.4rem 10rem 2.4rem 0;
+  }
+
+  .contact form {
+    grid-area: form;
+  }
+
+  /* ------ FOOTER ------ */
+  footer {
+    margin-bottom: 10rem;
+    height: 100%;
+  }
+
+  footer .container {
+    padding: 2.5rem 8.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "languages"
+      "buttons"
+      "rights";
+    justify-items: center;
+    gap: 1.6rem;
+  }
+
+  .rights {
+    grid-area: rights;
+  }
+
+  .languages {
+    grid-area: languages;
+  }
+
+  .buttons-social-networks {
+    grid-area: buttons;
+  }
+
+  .rights p {
+    text-align: center;
+  }
+
+  .rights span:nth-child(2) {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* ----------------------------------- */
+  /* ----------------------------------- */
+  /* ------ D E S A T I V A D O S ------ */
+  /* ----------------------------------- */
+  /* ----------------------------------- */
+  /* .presentation, */
+  /* .about-me, */
+  /* .tools, */
+  /* .graduations, */
+  /* .courses, */
+  /* .projects, */
+  /* .contact, */
+  /* footer {
+    display: none;
+    visibility: hidden;
+  } */
+}

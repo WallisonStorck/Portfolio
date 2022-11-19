@@ -1,12 +1,7 @@
-/* ---------------- MEDIA SCREENS ---------------- */
-@media screen and (max-width: 480px) {
+/* ---------------- MEDIA SCREENS MOBILE ---------------- */
+/* @media screen and (max-width: 480px) { */
+@media (min-width: 320px) and (max-width: 720px) {
   /* ------ HEADER ------ */
-  .links,
-  .language-networks {
-    display: none;
-    visibility: hidden;
-  }
-
   header {
     align-items: center;
     justify-content: initial;
@@ -16,6 +11,12 @@
     display: initial;
     padding: 0 35px;
     justify-content: space-between;
+  }
+
+  .links,
+  .language-networks {
+    display: none;
+    visibility: hidden;
   }
 
   .menu .side-menu {
@@ -230,7 +231,7 @@
   /* ------ COURSES ------ */
   .rectangle-left-courses,
   .rectangle-right-courses,
-  .line {
+  .line-divider-course {
     display: none;
     visibility: hidden;
   }
@@ -240,7 +241,25 @@
     padding: 6rem 3.5rem 6rem 3.5rem;
 
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "alura-course"
+      "igti-course"
+      "dio-course"
+      "cloud-course";
     gap: 6.4rem;
+  }
+
+  .alura-course {
+    grid-area: alura-course;
+  }
+  .igti-course {
+    grid-area: igti-course;
+  }
+  .dio-course {
+    grid-area: dio-course;
+  }
+  .cloud-course {
+    grid-area: cloud-course;
   }
 
   .course {
@@ -327,9 +346,20 @@
   }
 
   .contact .container {
-    padding: 85px 35px 78px 35px;
-    flex-direction: column;
+    padding: 8.5rem 3.5rem 7.8rem 3.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "description"
+      "form";
     gap: 5.6rem;
+  }
+
+  .description-contact {
+    grid-area: description;
+  }
+
+  .contact form {
+    grid-area: form;
   }
 
   .description-contact h2 {
@@ -359,7 +389,7 @@
       "button";
   }
 
-  /* ------ FORM ------ */
+  /* ------ FOOTER ------ */
   footer {
     height: 100%;
   }
@@ -371,9 +401,19 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
+      "languages"
       "buttons"
       "rights";
     justify-items: center;
+  }
+
+  .languages {
+    grid-area: languages;
+    align-items: center;
+  }
+
+  .languages button {
+    font-size: 2rem;
   }
 
   .rights {
@@ -388,4 +428,26 @@
     font-size: 1.2rem;
     text-align: center;
   }
+
+  .rights span:nth-child(2) {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* ----------------------------------- */
+  /* ----------------------------------- */
+  /* ------ D E S A T I V A D O S ------ */
+  /* ----------------------------------- */
+  /* ----------------------------------- */
+  /* .presentation, */
+  /* .about-me, */
+  /* .tools, */
+  /* .graduations, */
+  /* .courses, */
+  /* .projects, */
+  /* .contact, */
+  /* footer {
+    display: none;
+    visibility: hidden;
+  } */
 }
