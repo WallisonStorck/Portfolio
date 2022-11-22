@@ -1,6 +1,5 @@
 /* ---------------- MEDIA SCREENS MOBILE ---------------- */
-/* @media screen and (max-width: 480px) { */
-@media (min-width: 320px) and (max-width: 720px) {
+@media (min-width: 320px) and (max-width: 719px) {
   /* ------ HEADER ------ */
   header {
     align-items: center;
@@ -43,7 +42,8 @@
   }
 
   .presentation {
-    padding: 0 35px;
+    /* padding: 0 35px; */
+    padding: 10.5rem 3.5rem 3.5rem 3.5rem;
   }
 
   .presentation .container {
@@ -105,6 +105,16 @@
     grid-template-columns: 1fr;
   }
 
+  .text-about br:nth-child(1) {
+    display: none;
+    visibility: hidden;
+  }
+
+  .text-about br:nth-child(2) {
+    display: none;
+    visibility: hidden;
+  }
+
   .about-me .description h4 {
     font-size: 3.2rem;
   }
@@ -145,11 +155,11 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
+    /* grid-template-rows: 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto; */
+    /* grid-auto-columns: 1fr; */
+    grid-template-rows: auto;
     gap: 0.8rem;
-    grid-auto-flow: row;
+    /* grid-auto-flow: row; */
     grid-template-areas:
       "icon-fimca"
       "place-fimca"
@@ -224,7 +234,7 @@
 
   .history .description p {
     width: 100%;
-    margin-top: 2.2rem;
+    margin-top: 1.2rem;
     margin-bottom: 4rem;
   }
 
@@ -238,9 +248,10 @@
 
   .courses .container {
     width: 100%;
-    padding: 6rem 3.5rem 6rem 3.5rem;
+    padding: 6rem 3.5rem;
 
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       "alura-course"
       "igti-course"
@@ -396,7 +407,7 @@
 
   footer .container {
     padding: 31px 35px;
-    gap: 5rem;
+    gap: 2rem;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -408,8 +419,14 @@
   }
 
   .languages {
+    display: initial;
+    visibility: visible;
+
     grid-area: languages;
     align-items: center;
+
+    display: flex;
+    gap: 1.2rem;
   }
 
   .languages button {
@@ -432,6 +449,11 @@
   .rights span:nth-child(2) {
     display: none;
     visibility: hidden;
+  }
+
+  .text-rights br {
+    display: initial;
+    visibility: visible;
   }
 
   /* ----------------------------------- */

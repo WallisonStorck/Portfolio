@@ -53,7 +53,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: var(--color-background);
-  box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1.4rem 2.4rem rgba(0, 0, 0, 0.15);
 }
 
 nav {
@@ -166,9 +166,11 @@ nav {
 /* ------------------- SECTION - PRESENTATION ------------------- */
 .presentation {
   position: relative;
-  margin-top: 8rem;
+  /* margin-top: 8rem; */
+  padding-top: 8rem;
 
-  height: calc(100vh - 8rem);
+  /* min-height: calc(100vh - 8rem); */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -354,7 +356,7 @@ nav {
   color: var(--color-grey-1000);
 }
 
-.about-me .description p {
+.text-about {
   margin: 2.4rem 0;
   font-size: 1.4rem;
   line-height: 2.7rem;
@@ -443,7 +445,8 @@ nav {
   padding-left: 25rem;
   display: grid;
   grid-template-columns: 12vw 4vw 45vw;
-  grid-template-rows: 5vh 35vh 5vh 35vh 5vh 35vh;
+  /* grid-template-rows: 5vh 35vh 5vh 35vh 5vh 35vh; */
+  grid-template-rows: 5vh auto 5vh auto 5vh auto;
   gap: 0 8rem;
   grid-template-areas:
     "place-fimca icon-fimca degree-fimca"
@@ -497,10 +500,12 @@ nav {
 
 .history .description p {
   margin-top: 0.9rem;
-  width: 56rem;
+  max-width: 56rem;
   font-size: 1.4rem;
   line-height: 2.7rem;
   color: var(--color-grey-600);
+
+  margin-bottom: 10rem;
 }
 
 .degree-ulbra {
@@ -829,10 +834,6 @@ nav {
   grid-area: form;
 }
 
-/* .description-contact {
-  width: 47rem;
-} */
-
 .description-contact > img {
   width: 5.3rem;
   margin-left: 1.3rem;
@@ -856,7 +857,7 @@ nav {
 /* ---------- Form ---------- */
 .contact form {
   display: grid;
-  grid-template-columns: 27.7rem 27.7rem;
+  grid-template-columns: auto auto;
   grid-template-rows: 5.5rem 5.5rem 14.9rem 5.5rem;
   gap: 1.6rem;
   grid-template-areas:
@@ -928,10 +929,15 @@ footer .container {
   gap: 13rem;
 }
 
-.rights p {
+.text-rights {
   font-size: 1.4rem;
   line-height: 2.7rem;
   color: var(--color-grey-1000);
+}
+
+.text-rights br {
+  display: none;
+  visibility: hidden;
 }
 
 .rights span:nth-child(1) {

@@ -1,5 +1,4 @@
 /* ---------------- MEDIA SCREENS TABLET ---------------- */
-/* @media screen and (max-width: 768px) { */
 @media (min-width: 720px) and (max-width: 1024px) {
   /* ------ HEADER ------ */
   header {
@@ -42,7 +41,7 @@
     visibility: hidden;
   }
   .presentation .container {
-    padding: 0 8.5rem;
+    padding: 8.5rem;
     grid-template-columns: 1fr;
   }
 
@@ -65,9 +64,15 @@
       "images";
   }
 
+  .text-about br {
+    display: none;
+    visibility: hidden;
+  }
+
   .images {
     grid-area: images;
     padding: 0;
+    justify-self: center;
   }
 
   .description {
@@ -85,7 +90,8 @@
     padding-left: 0;
     /* display: grid; */
     grid-template-columns: 20vw 10vw 50vw;
-    grid-template-rows: 5vh 30vh 5vh 30vh 5vh 30vh;
+    /* grid-template-rows: 5vh 30vh 5vh 30vh 5vh 30vh; */
+    grid-template-rows: auto;
     gap: 0;
   }
 
@@ -160,7 +166,7 @@
     grid-template-areas:
       "alura-course igti-course"
       "dio-course cloud-course";
-    gap: 5rem 3rem;
+    gap: 5rem 7rem;
   }
 
   .alura-course {
@@ -236,7 +242,6 @@
 
   /* ------ FOOTER ------ */
   footer {
-    margin-bottom: 10rem;
     height: 100%;
   }
 
@@ -250,7 +255,7 @@
       "buttons"
       "rights";
     justify-items: center;
-    gap: 1.6rem;
+    gap: 2.5rem;
   }
 
   .rights {
@@ -265,13 +270,26 @@
     grid-area: buttons;
   }
 
-  .rights p {
+  .text-rights {
     text-align: center;
   }
 
   .rights span:nth-child(2) {
     display: none;
     visibility: hidden;
+  }
+
+  .text-rights br {
+    display: initial;
+    visibility: visible;
+  }
+
+  .languages {
+    display: initial;
+    visibility: visible;
+
+    display: flex;
+    gap: 1.2rem;
   }
 
   /* ----------------------------------- */
