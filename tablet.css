@@ -283,7 +283,7 @@
 
   /* --------------- AJUSTES DO MENU INTERATIVO --------------- */
 
-  .menu .links.active {
+  /* .menu .links.active {
     right: 0;
   }
 
@@ -328,5 +328,5 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
-  }
+  } */
 }

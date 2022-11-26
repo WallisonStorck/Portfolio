@@ -27,6 +27,7 @@
   --color-divider-courses: #273041;
   --color-divider-projects: #cfd7e4;
   --color-border-form: #313948;
+  --color-toggle-menu: #1c1f26;
 }
 
 * {
@@ -274,6 +275,7 @@ nav {
 
   cursor: pointer;
   padding: 16px 32px;
+  text-align: center;
   text-decoration: none;
   border-radius: 6px;
   border: none;
@@ -977,4 +979,60 @@ footer .container {
 .rights a {
   text-decoration: none;
   color: var(--color-grey-1000);
+}
+
+footer .container .languages {
+  display: none;
+  visibility: hidden;
+}
+
+/* --------------- AJUSTES DO MENU INTERATIVO --------------- */
+@media screen and (max-width: 1024px) {
+  .menu .links.sideMenuActive {
+    right: 0;
+  }
+
+  .menu .links {
+    min-width: 45vw;
+    height: 100vh;
+    padding: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 35rem 7rem;
+    grid-template-areas:
+      "languages"
+      "links"
+      "networks";
+    gap: 0;
+
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    z-index: 100;
+    transition: all 0.5s;
+    background-color: var(--color-toggle-menu);
+    box-shadow: -15px 0rem 2.4rem rgb(0 0 0 / 15%);
+  }
+
+  .links ul {
+    grid-area: links;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .links .languages {
+    grid-area: languages;
+    align-self: flex-start;
+  }
+
+  .links .social-networks {
+    grid-area: networks;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 }
