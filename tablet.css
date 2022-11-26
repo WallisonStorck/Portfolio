@@ -1,5 +1,8 @@
 /* ---------------- MEDIA SCREENS TABLET ---------------- */
 @media (min-width: 720px) and (max-width: 1024px) {
+  :root {
+    --color-toggle-menu: #1c1f26;
+  }
   /* ------ HEADER ------ */
   header {
     align-items: center;
@@ -11,7 +14,6 @@
     padding: 0 8.5rem;
   }
 
-  .links,
   .language-networks {
     display: none;
     visibility: hidden;
@@ -20,6 +22,7 @@
   .menu .side-menu {
     display: initial;
     visibility: visible;
+    z-index: 101;
   }
 
   .menu {
@@ -47,6 +50,7 @@
 
   .tag-default {
     margin-bottom: 0.8rem;
+    /* align-self: center; */
   }
 
   /* ------ ABOUT-ME ------ */
@@ -100,16 +104,9 @@
     margin-top: 2.5rem;
   }
 
-  /* .description-fimca,
-  .description-ipog,
-  p {
-    width: initial;
-    margin-top: 2.5rem;
-  } */
-
-  /* .description-ulbra p {
-    margin-top: 0;
-  } */
+  .history .description-ulbra p {
+    margin-top: 0.5rem;
+  }
 
   /* prettier-ignore-start */
   .place-fimca {
@@ -284,28 +281,52 @@
     visibility: visible;
   }
 
-  .languages {
-    display: initial;
-    visibility: visible;
+  /* --------------- AJUSTES DO MENU INTERATIVO --------------- */
 
-    display: flex;
-    gap: 1.2rem;
+  .menu .links.active {
+    right: 0;
   }
 
-  /* ----------------------------------- */
-  /* ----------------------------------- */
-  /* ------ D E S A T I V A D O S ------ */
-  /* ----------------------------------- */
-  /* ----------------------------------- */
-  /* .presentation, */
-  /* .about-me, */
-  /* .tools, */
-  /* .graduations, */
-  /* .courses, */
-  /* .projects, */
-  /* .contact, */
-  /* footer {
-    display: none;
-    visibility: hidden;
-  } */
+  .menu .links {
+    height: 100vh;
+    padding: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 35rem 7rem;
+    grid-template-areas:
+      "languages"
+      "links"
+      "networks";
+    gap: 0;
+
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    z-index: 100;
+    transition: all 0.5s;
+    background-color: var(--color-toggle-menu);
+    box-shadow: -15px 0rem 2.4rem rgb(0 0 0 / 15%);
+  }
+
+  .links ul {
+    grid-area: links;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .links .languages {
+    grid-area: languages;
+    align-self: flex-start;
+  }
+
+  .links .social-networks {
+    grid-area: networks;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 }

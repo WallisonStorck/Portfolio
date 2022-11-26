@@ -1,5 +1,8 @@
 /* ---------------- MEDIA SCREENS MOBILE ---------------- */
-@media (min-width: 320px) and (max-width: 719px) {
+@media screen and (max-width: 719px) {
+  :root {
+    --color-toggle-menu: #1c1f26;
+  }
   /* ------ HEADER ------ */
   header {
     align-items: center;
@@ -12,24 +15,24 @@
     justify-content: space-between;
   }
 
-  .links,
-  .language-networks {
-    display: none;
-    visibility: hidden;
-  }
-
   .menu .side-menu {
     display: initial;
     visibility: visible;
+    z-index: 101;
   }
 
   .menu {
     justify-content: space-between;
+    gap: 0;
   }
 
   .logo img {
     width: 71.67px;
     height: 24px;
+  }
+
+  .menu .links {
+    display: initial;
   }
 
   /* ------ PRESENTATION ------ */
@@ -59,6 +62,7 @@
 
   .tag-default {
     font-size: 1.2rem;
+    align-self: center;
   }
 
   .presentation-description h3 {
@@ -322,7 +326,8 @@
   .container-project .details-project {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.2rem;
+    gap: 25%;
+    /* gap: 2.2rem; */
   }
 
   .btn-access-project::before {
@@ -419,14 +424,10 @@
   }
 
   .languages {
-    display: initial;
+    /* display: initial; */
     visibility: visible;
 
     grid-area: languages;
-    align-items: center;
-
-    display: flex;
-    gap: 1.2rem;
   }
 
   .languages button {
@@ -456,20 +457,52 @@
     visibility: visible;
   }
 
-  /* ----------------------------------- */
-  /* ----------------------------------- */
-  /* ------ D E S A T I V A D O S ------ */
-  /* ----------------------------------- */
-  /* ----------------------------------- */
-  /* .presentation, */
-  /* .about-me, */
-  /* .tools, */
-  /* .graduations, */
-  /* .courses, */
-  /* .projects, */
-  /* .contact, */
-  /* footer {
-    display: none;
-    visibility: hidden;
-  } */
+  /* --------------- AJUSTES DO MENU INTERATIVO --------------- */
+
+  .menu .links.active {
+    right: 0;
+  }
+
+  .menu .links {
+    height: 100vh;
+    padding: 2.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 35rem 7rem;
+    grid-template-areas:
+      "languages"
+      "links"
+      "networks";
+    gap: 0;
+
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    z-index: 100;
+    transition: all 0.5s;
+    background-color: var(--color-toggle-menu);
+    box-shadow: -15px 0rem 2.4rem rgb(0 0 0 / 15%);
+  }
+
+  .links ul {
+    grid-area: links;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .links .languages {
+    grid-area: languages;
+    align-self: flex-start;
+  }
+
+  .links .social-networks {
+    grid-area: networks;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 }

@@ -62,13 +62,32 @@ nav {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .menu {
-  display: flex;
+  width: 100%;
+  max-width: 1170px;
+
+  display: grid;
+  grid-template-columns: 0fr;
+  grid-template-areas: "logo links";
+  gap: 6.5rem;
   align-items: center;
-  gap: 6.4rem;
+}
+
+.menu a {
+  grid-area: logo;
+}
+
+.menu .links {
+  /* width: 100%; */
+
+  display: grid;
+  grid-template-columns: 8fr 1fr 1fr;
+  grid-template-areas: "menu languages links";
+
+  /* grid-area: links; */
+  justify-content: space-between;
 }
 
 .menu .side-menu {
@@ -117,7 +136,7 @@ nav {
   color: var(--color-secondary-100);
 }
 
-.language-networks {
+.social-networks {
   font-size: 1.4rem;
 
   display: flex;
@@ -125,7 +144,7 @@ nav {
   gap: 2.4rem;
 }
 
-.language-networks a {
+.social-networks a {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -134,9 +153,10 @@ nav {
   color: var(--color-grey-1000);
 }
 
-.languages {
+.languages .container {
   display: flex;
-  gap: 0.7rem;
+  align-items: center;
+  gap: 1rem;
 }
 
 .languages button {
@@ -183,13 +203,13 @@ nav {
   object-fit: cover;
 
   position: absolute;
-  top: 0;
+  top: 8rem;
   left: 0;
 }
 
 .rectangle-right-presentation {
   position: absolute;
-  top: 0;
+  top: 8rem;
   right: 0;
 }
 
@@ -203,7 +223,14 @@ nav {
   z-index: 1;
 }
 
+.presentation .presentation-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .tag-default {
+  align-self: flex-start;
   display: inline-block;
   font-weight: 400;
   font-size: 1.6rem;
@@ -303,6 +330,7 @@ nav {
   justify-content: space-around;
 
   background-color: var(--color-primary-200);
+  z-index: 1;
 }
 
 .rectangle-left-about {
@@ -743,6 +771,7 @@ nav {
 .container-project .details-project {
   display: flex;
   padding: 0 3.2rem;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -754,6 +783,7 @@ nav {
 .details-project .btn-access-project {
   position: relative;
   cursor: pointer;
+  padding: 1rem 0;
   display: flex;
   align-items: center;
   gap: 1.4rem;
@@ -947,9 +977,4 @@ footer .container {
 .rights a {
   text-decoration: none;
   color: var(--color-grey-1000);
-}
-
-.languages {
-  display: none;
-  visibility: hidden;
 }

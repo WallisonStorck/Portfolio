@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@700;900&family=Montserrat:ital,wght@0,400;1,700&display=swap"
     rel="stylesheet">
+  <script src="script.js" defer></script>
   <!-- <link rel="stylesheet" href="reset.css"> -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mobile.css">
@@ -23,7 +24,7 @@
       <div class="menu">
         <a href="#presentation" class="logo"><img src="assets/LogoWallison.svg" alt="Logo Wallison"></a>
         <div class="side-menu">
-          <img src="assets/icons/icon-menu.svg" alt="Ícone Menu">
+          <img class="menu-icon" src="assets/icons/icon-menu.svg" alt="Ícone Menu">
         </div>
         <div class="links">
           <ul>
@@ -32,22 +33,24 @@
             <li><a href="#projects" class="link">Portfólio</a></li>
             <li><a href="#contact" class="link">Contato</a></li>
           </ul>
+          <div class="languages">
+            <div class="container">
+              <button class="language-activated">PT</button>
+              <div class="languages-divider"></div>
+              <button class="language-disabled">EN</button>
+            </div>
+          </div>
+          <div class="social-networks">
+            <a href="https://www.linkedin.com/in/wallisonstorck/" target="_blank">
+              <img src="assets/icons/icon-linkedin.svg" alt="Linkedin">
+              Linkedin
+            </a>
+            <a href="mailto:storck779@gmail.com">
+              <img src="assets/icons/icon-email.svg" alt="E-mail">
+              storck779@gmail.com
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="language-networks">
-        <div class="languages">
-          <button class="language-activated">PT</button>
-          <div class="languages-divider"></div>
-          <button class="language-disabled">EN</button>
-        </div>
-        <a href="https://www.linkedin.com/in/wallisonstorck/" target="_blank">
-          <img src="assets/icons/icon-linkedin.svg" alt="Linkedin">
-          Linkedin
-        </a>
-        <a href="mailto:storck779@gmail.com">
-          <img src="assets/icons/icon-email.svg" alt="E-mail">
-          storck779@gmail.com
-        </a>
       </div>
     </nav>
   </header>
@@ -403,9 +406,11 @@
         </p>
       </div>
       <div class="languages">
-        <button class="language-activated">PT</button>
-        <div class="languages-divider"></div>
-        <button class="language-disabled">EN</button>
+        <div class="container">
+          <button class="language-activated">PT</button>
+          <div class="languages-divider"></div>
+          <button class="language-disabled">EN</button>
+        </div>
       </div>
       <div class="buttons-social-networks">
         <ul>
