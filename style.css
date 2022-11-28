@@ -995,7 +995,7 @@ footer .container .languages {
   .menu .links {
     min-width: 45vw;
     height: 100vh;
-    padding: 2.5rem;
+    padding: 4% 6.5%;
 
     display: grid;
     grid-template-columns: 1fr;

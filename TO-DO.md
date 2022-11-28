@@ -4,8 +4,6 @@
 
 - Adicionar seleção estilizada no menu clicado.
 
-  - Quando clicar no menu ele deve ficar em negrito.
-  - Ao rolar a pagina a seleção deve ser desfeita.
-  - Menu lateral deve ser escondido.
+  - A section em evidencia na pagina deve corresponder no menu
 
 - Ajustar imagens (retângulos) de fundo para que diminuam um pouco com resoluções menores.
