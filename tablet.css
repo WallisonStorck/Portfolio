@@ -1,8 +1,5 @@
 /* ---------------- MEDIA SCREENS TABLET ---------------- */
 @media (min-width: 720px) and (max-width: 1024px) {
-  :root {
-    --color-toggle-menu: #1c1f26;
-  }
   /* ------ HEADER ------ */
   header {
     align-items: center;
@@ -277,6 +274,16 @@
   }
 
   .text-rights br {
+    display: initial;
+    visibility: visible;
+  }
+
+  footer .btn-up {
+    display: none;
+    visibility: hidden;
+  }
+
+  footer .buttons-social-networks {
     display: initial;
     visibility: visible;
   }

@@ -1,8 +1,5 @@
 /* ---------------- MEDIA SCREENS MOBILE ---------------- */
 @media screen and (max-width: 719px) {
-  :root {
-    --color-toggle-menu: #1c1f26;
-  }
   /* ------ HEADER ------ */
   header {
     align-items: center;
@@ -31,7 +28,7 @@
     height: 24px;
   }
 
-  /* .anchors {
+  /* .menu-links {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
@@ -115,7 +112,12 @@
     grid-template-columns: 1fr;
   }
 
-  .text-about br:nth-child(1) {
+  .text-about br:nth-child(-n + 2) {
+    display: none;
+    visibility: hidden;
+  }
+
+  /* .text-about br:nth-child(1) {
     display: none;
     visibility: hidden;
   }
@@ -123,7 +125,7 @@
   .text-about br:nth-child(2) {
     display: none;
     visibility: hidden;
-  }
+  } */
 
   .about-me .description h4 {
     font-size: 3.2rem;
@@ -141,7 +143,6 @@
 
     grid-template-columns: repeat(5, 2.8rem);
     gap: 3.4rem;
-    height: 12rem;
   }
 
   .tools img {
@@ -151,7 +152,7 @@
   /* ------ GRADUATIONS ------ */
   .graduations .container {
     width: 100%;
-    padding: 7rem 35px 0 35px;
+    padding: 7rem 35px 3rem 35px;
     align-items: flex-start;
   }
 
@@ -316,8 +317,8 @@
   } /* Inversion of quadrants */
 
   .project > img {
-    width: 305.11px;
-    height: 177.29px;
+    max-width: 305.11px;
+    max-height: 177.29px;
   }
 
   .projects .title {
@@ -459,6 +460,16 @@
   }
 
   .text-rights br {
+    display: initial;
+    visibility: visible;
+  }
+
+  footer .btn-up {
+    display: none;
+    visibility: hidden;
+  }
+
+  footer .buttons-social-networks {
     display: initial;
     visibility: visible;
   }

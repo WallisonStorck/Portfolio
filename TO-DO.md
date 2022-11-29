@@ -1,9 +1,9 @@
 # A fazer:
 
-- Adicionar tradução
+- Adicionar tradução com i18next.js
 
 - Adicionar seleção estilizada no menu clicado.
 
-  - A section em evidencia na pagina deve corresponder no menu
+  - A section em evidência na página deve corresponder no menu
 
 - Ajustar imagens (retângulos) de fundo para que diminuam um pouco com resoluções menores.

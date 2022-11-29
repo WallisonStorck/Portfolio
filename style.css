@@ -104,7 +104,7 @@ nav {
   list-style: none;
 } */
 
-.anchors {
+.menu-links {
   display: flex;
   gap: 5.5rem;
 }
@@ -975,8 +975,8 @@ footer .container {
 
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 13rem;
+  justify-content: space-between;
+  /* gap: 13rem; */
 }
 
 .text-rights {
@@ -1004,6 +1004,11 @@ footer .container .languages {
   visibility: hidden;
 }
 
+footer .buttons-social-networks {
+  display: none;
+  visibility: hidden;
+}
+
 /* --------------- AJUSTES DO MENU INTERATIVO --------------- */
 @media screen and (max-width: 1024px) {
   .menu .links.sideMenuActive {
@@ -1013,7 +1018,6 @@ footer .container .languages {
   .menu .links {
     min-width: 45vw;
     height: 100vh;
-    padding-top: 2rem;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -1034,7 +1038,7 @@ footer .container .languages {
     box-shadow: -15px 0rem 2.4rem rgb(0 0 0 / 15%);
   }
 
-  .anchors {
+  .menu-links {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
