@@ -282,51 +282,8 @@
   }
 
   /* --------------- AJUSTES DO MENU INTERATIVO --------------- */
-
-  /* .menu .links.active {
-    right: 0;
-  }
-
   .menu .links {
-    height: 100vh;
-    padding: 2.5rem;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3rem 35rem 7rem;
-    grid-template-areas:
-      "languages"
-      "links"
-      "networks";
-    gap: 0;
-
-    position: fixed;
-    top: 0;
-    right: -1000px;
-    z-index: 100;
-    transition: all 0.5s;
-    background-color: var(--color-toggle-menu);
-    box-shadow: -15px 0rem 2.4rem rgb(0 0 0 / 15%);
+    padding: 0 7%;
+    padding-top: 2rem;
   }
-
-  .links ul {
-    grid-area: links;
-    align-self: center;
-
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-
-  .links .languages {
-    grid-area: languages;
-    align-self: flex-start;
-  }
-
-  .links .social-networks {
-    grid-area: networks;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-  } */
 }
