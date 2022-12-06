@@ -1021,7 +1021,7 @@ footer .buttons-social-networks {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3rem 35rem 7rem;
+    grid-template-rows: 4rem 35rem 10rem;
     grid-template-areas:
       "languages"
       "links"
@@ -1041,7 +1041,7 @@ footer .buttons-social-networks {
   .menu-links {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .links .link,
