@@ -72,6 +72,7 @@
 
   .images {
     grid-area: images;
+    height: initial;
     padding: 0;
     justify-self: center;
   }

@@ -92,6 +92,7 @@ nav {
 }
 
 .menu .side-menu {
+  cursor: pointer;
   display: none;
   visibility: hidden;
 }
@@ -372,12 +373,14 @@ nav {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   gap: 13rem;
   z-index: 1;
 }
 
 .images {
-  padding: 2.8rem 0;
+  height: 52.2rem;
+  /* padding: 2.8rem 0; */
 
   display: flex;
   gap: 3rem;
@@ -493,9 +496,8 @@ nav {
   padding-left: 25rem;
   display: grid;
   grid-template-columns: 12vw 4vw 45vw;
-  /* grid-template-rows: 5vh 35vh 5vh 35vh 5vh 35vh; */
-  grid-template-rows: 5vh auto 5vh auto 5vh auto;
-  gap: 0 8rem;
+  grid-template-rows: 4.5vh auto 4.5vh auto 4.5vh auto;
+  gap: 0 4.5vh;
   grid-template-areas:
     "place-fimca icon-fimca degree-fimca"
     ". . description-fimca"
@@ -595,7 +597,7 @@ nav {
 .timeline {
   display: flex;
   justify-content: center;
-  grid-area: 1 / 2 / 5 / 3;
+  grid-area: 1 / 2 / 6 / 3;
 }
 
 /* ------------------- SECTION - COURSES ------------------- */
