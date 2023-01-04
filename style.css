@@ -992,7 +992,7 @@ footer .container {
   visibility: hidden;
 }
 
-.rights span:nth-child(2) {
+.rights .name {
   color: var(--color-secondary-100);
 }
 

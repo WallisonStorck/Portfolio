@@ -454,7 +454,7 @@
     text-align: center;
   }
 
-  .rights span:nth-child(3) {
+  .rights .separator {
     display: none;
     visibility: hidden;
   }
