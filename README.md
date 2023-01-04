@@ -8,7 +8,17 @@
  </p>
 <br>
 <p align="center">
-  <img alt="Landing Page" src="./PrintPageV1.5.png">
+  <img alt="Landing Page" src="./Prints/PrintPageV2.png">
+</p>
+
+<p align="center">
+  <img alt="Landing Page" src="./Prints/PrintPageMobile1.png" width="215px">
+  <img alt="Landing Page" src="./Prints/PrintPageMobile2.png" width="218px">
+  </p>
+  
+  <p align="center">
+  <img alt="Landing Page" src="./Prints/PrintPageTablet1.png" width="216px">
+  <img alt="Landing Page" src="./Prints/PrintPageTablet2.png" width="217px">
 </p>
 
 <br>
@@ -33,5 +43,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
   - FlexBox
   - Grid Layout
+- JavaScript
 
 ---

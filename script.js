@@ -13,12 +13,6 @@ function mappingElements() {
   elements.copyRights = body.querySelector(".text-rights .current-year");
 }
 
-function updateCopyrights() {
-  const date = new Date();
-  const currentYear = date.getFullYear().toString();
-  elements.copyRights.innerText = currentYear;
-}
-
 function removeSideMenuAfterClick() {
   // AO ABRIR A APLICAÇÃO, ADICIONA EVENTO DE REMOVER MENU, NOS ITENS DO PRÓPRIO MENU E NA LOGO
   [elements.logoIcon, elements.menu].forEach((element) => {
@@ -35,6 +29,12 @@ function btnSideMenu() {
     //Adiciona o vento de ao clicar nas "barrinhas" adiciona ou remove o menu
     elements.menu.classList.toggle("sideMenuActive");
   });
+}
+
+function updateCopyrights() {
+  const date = new Date();
+  const currentYear = date.getFullYear().toString();
+  elements.copyRights.innerText = currentYear;
 }
 
 window.onload = async () => {
