@@ -2,7 +2,22 @@ let elements = {
   menu: "",
   menuIcon: "",
   logoIcon: "",
+  copyRights: "",
 };
+
+function mappingElements() {
+  const body = document.querySelector("body");
+  elements.menu = body.querySelector(".menu .links"); //Guarda todos o menu
+  elements.menuIcon = body.querySelector(".side-menu .menu-icon"); //Guarda referencia das "barrinhas"
+  elements.logoIcon = body.querySelector(".menu .logo");
+  elements.copyRights = body.querySelector(".text-rights .current-year");
+}
+
+function updateCopyrights() {
+  const date = new Date();
+  const currentYear = date.getFullYear().toString();
+  elements.copyRights.innerText = currentYear;
+}
 
 function removeSideMenuAfterClick() {
   // AO ABRIR A APLICAÇÃO, ADICIONA EVENTO DE REMOVER MENU, NOS ITENS DO PRÓPRIO MENU E NA LOGO
@@ -15,10 +30,6 @@ function removeSideMenuAfterClick() {
 
 function btnSideMenu() {
   // ADICIONA EVENTO DE ACIONAR E ESCONDER O MENU ATRAVÉS DAS BARRAS
-  const header = document.querySelector("header");
-  elements.menu = header.querySelector(".menu .links"); //Guarda todos o menu
-  elements.menuIcon = header.querySelector(".side-menu .menu-icon"); //Guarda referencia das "barrinhas"
-  elements.logoIcon = header.querySelector(".menu .logo");
 
   elements.menuIcon.addEventListener("click", () => {
     //Adiciona o vento de ao clicar nas "barrinhas" adiciona ou remove o menu
@@ -26,7 +37,9 @@ function btnSideMenu() {
   });
 }
 
-window.onload = () => {
-  btnSideMenu();
-  removeSideMenuAfterClick();
+window.onload = async () => {
+  await mappingElements();
+  await btnSideMenu();
+  await removeSideMenuAfterClick();
+  await updateCopyrights();
 };
