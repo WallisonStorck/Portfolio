@@ -481,3 +481,9 @@
     /* align-items: center; */
   }
 }
+
+@media screen and (max-height: 414px) {
+  header {
+    height: 6rem;
+  }
+}
