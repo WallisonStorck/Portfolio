@@ -483,8 +483,12 @@
   }
 }
 
-@media screen and (max-height: 667px) {
+@media screen and (max-height: 666px) {
   header {
     height: 6rem;
+  }
+
+  .presentation {
+    padding: 8.5rem 3.5rem 3.5rem 3.5rem;
   }
 }
