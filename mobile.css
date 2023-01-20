@@ -317,6 +317,7 @@
   } /* Inversion of quadrants */
 
   .project > img {
+    width: 100%;
     max-width: 305.11px;
     max-height: 177.29px;
   }
@@ -482,7 +483,7 @@
   }
 }
 
-@media screen and (max-height: 414px) {
+@media screen and (max-height: 667px) {
   header {
     height: 6rem;
   }

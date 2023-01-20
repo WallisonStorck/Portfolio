@@ -5,3 +5,7 @@
 - Adicionar seleção estilizada no menu clicado.
 
   - A section em evidência na página deve corresponder no menu
+
+Changes:
+
+- Tamanho de imagens
