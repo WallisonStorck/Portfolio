@@ -82,6 +82,7 @@
   }
 
   .presentation-description p {
+    max-width: 28rem;
     margin-bottom: 2.3rem;
 
     text-align: center;
@@ -489,7 +490,7 @@
   /* --------------------------------------------------------------- */
 }
 
-@media screen and (max-height: 666px) {
+@media (max-height: 667px) and (max-width: 768px) {
   header {
     height: 6rem;
   }

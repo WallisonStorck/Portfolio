@@ -274,7 +274,7 @@ nav {
 }
 
 .presentation-description p {
-  max-width: 570px;
+  /* max-width: 570px; */
   margin-bottom: 3.2rem;
   font-size: 1.8rem;
   line-height: 3.6rem;

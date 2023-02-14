@@ -50,6 +50,10 @@
     /* align-self: center; */
   }
 
+  .presentation-description p {
+    max-width: 52rem;
+  }
+
   /* ------ ABOUT-ME ------ */
   .rectangle-left-about,
   .rectangle-right-about {
