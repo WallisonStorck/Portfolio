@@ -481,6 +481,12 @@
     padding-top: 2rem;
     /* align-items: center; */
   }
+
+  /* --------------- REMOVER APÓS FEATURE DE IDIOMAS --------------- */
+  .menu-links {
+    padding-top: 30rem;
+  }
+  /* --------------------------------------------------------------- */
 }
 
 @media screen and (max-height: 666px) {

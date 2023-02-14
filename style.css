@@ -1057,7 +1057,7 @@ footer .buttons-social-networks {
   /* .links ul {
     grid-area: links;
     align-self: center;
-
+    
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -1074,4 +1074,10 @@ footer .buttons-social-networks {
     align-items: flex-start;
     gap: 2rem;
   }
+}
+
+/* --------------- REMOVER APÓS FEATURE DE IDIOMAS --------------- */
+.languages {
+  display: none;
+  visibility: hidden;
 }
