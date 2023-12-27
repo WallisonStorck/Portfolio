@@ -28,16 +28,6 @@
     height: 24px;
   }
 
-  /* .menu-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  } */
-
-  /* .menu .links {
-    display: initial;
-  } */
-
   /* ------ PRESENTATION ------ */
   .rectangle-left-presentation,
   .rectangle-right-presentation,
@@ -48,7 +38,6 @@
   }
 
   .presentation {
-    /* padding: 0 35px; */
     padding: 10.5rem 3.5rem 3.5rem 3.5rem;
   }
 
@@ -61,6 +50,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: calc(100vh - 70px);
+    padding: 1rem 0;
   }
 
   .tag-default {
@@ -98,6 +89,14 @@
     gap: 3.5rem;
   }
 
+  .presentation-description h3,
+  .presentation-description h1,
+  .presentation-description p,
+  .description-buttons {
+    margin: 0;
+    gap: 2rem;
+  }
+
   /* ------ ABOUT-ME ------ */
   .rectangle-left-about,
   .rectangle-right-about,
@@ -117,16 +116,6 @@
     display: none;
     visibility: hidden;
   }
-
-  /* .text-about br:nth-child(1) {
-    display: none;
-    visibility: hidden;
-  }
-
-  .text-about br:nth-child(2) {
-    display: none;
-    visibility: hidden;
-  } */
 
   .about-me .description h4 {
     font-size: 3.2rem;
@@ -167,11 +156,8 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    /* grid-template-rows: 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto 4.8rem 5.6rem 8.2rem auto; */
-    /* grid-auto-columns: 1fr; */
     grid-template-rows: auto;
     gap: 0.8rem;
-    /* grid-auto-flow: row; */
     grid-template-areas:
       "icon-fimca"
       "place-fimca"
@@ -336,7 +322,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 25%;
-    /* gap: 2.2rem; */
   }
 
   .btn-access-project::before {

@@ -41,7 +41,6 @@ function removeSideMenuAfterClick() {
 
 function btnSideMenu() {
   // ADICIONA EVENTO DE ACIONAR E ESCONDER O MENU ATRAVÉS DAS BARRAS
-
   elements.menuIcon.addEventListener("click", () => {
     //Adiciona o vento de ao clicar nas "barrinhas" adiciona ou remove o menu
     elements.menu.classList.toggle("sideMenuActive");
@@ -52,6 +51,12 @@ function updateCopyrights() {
   const date = new Date();
   const currentYear = date.getFullYear().toString();
   elements.copyRights.innerText = currentYear;
+}
+
+function adjustViewport() {
+  let height = window.innerHeight;
+  let sectionPresentation = document.getElementById("presentation");
+  sectionPresentation.height = height + "px";
 }
 
 // function sendMessage() {
@@ -91,6 +96,7 @@ window.onload = async () => {
   await mappingElements();
   await btnSideMenu();
   await removeSideMenuAfterClick();
+  await adjustViewport();
   await updateCopyrights();
   // await sendMessage();
 };
