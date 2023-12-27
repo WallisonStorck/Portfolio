@@ -13,8 +13,12 @@
   }
 
   .menu .side-menu {
-    display: initial;
     visibility: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
+
     z-index: 101;
   }
 
@@ -459,13 +463,6 @@
   footer .buttons-social-networks {
     display: initial;
     visibility: visible;
-  }
-
-  /* --------------- AJUSTES DO MENU INTERATIVO --------------- */
-  .menu .links {
-    padding: 0 10%;
-    padding-top: 2rem;
-    /* align-items: center; */
   }
 
   /* --------------- REMOVER APÓS FEATURE DE IDIOMAS --------------- */

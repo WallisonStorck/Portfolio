@@ -15,23 +15,23 @@ let elements = {
 function mappingElements() {
   const body = document.querySelector("body");
   elements.menu = body.querySelector(".menu .links"); //Guarda todos o menu
-  elements.menuIcon = body.querySelector(".side-menu .menu-icon"); //Guarda referencia das "barrinhas"
+  elements.menuIcon = body.querySelector(".menu .side-menu"); //Guarda referencia das "barrinhas"
   elements.logoIcon = body.querySelector(".menu .logo");
   elements.copyRights = body.querySelector(".text-rights .current-year");
 
   // Cria uma variável com o formulário para pesquisar e apontar dentro dela todos os campos
-  const form = body.querySelector(".contact form");
-  elements.form = form;
-  elements.formName = form.querySelector("#name");
-  elements.formMail = form.querySelector("#email");
-  elements.formPhone = form.querySelector("#phone");
-  elements.formSubject = form.querySelector("#subject");
-  elements.formMessage = form.querySelector("#message");
-  elements.formBtnSubmit = form.querySelector(".btn-send-message");
+  // const form = body.querySelector(".contact form");
+  // elements.form = form;
+  // elements.formName = form.querySelector("#name");
+  // elements.formMail = form.querySelector("#email");
+  // elements.formPhone = form.querySelector("#phone");
+  // elements.formSubject = form.querySelector("#subject");
+  // elements.formMessage = form.querySelector("#message");
+  // elements.formBtnSubmit = form.querySelector(".btn-send-message");
 }
 
+// AO ABRIR A APLICAÇÃO, ADICIONA EVENTO DE REMOVER MENU, NOS ITENS DO PRÓPRIO MENU E NA LOGO
 function removeSideMenuAfterClick() {
-  // AO ABRIR A APLICAÇÃO, ADICIONA EVENTO DE REMOVER MENU, NOS ITENS DO PRÓPRIO MENU E NA LOGO
   [elements.logoIcon, elements.menu].forEach((element) => {
     element.addEventListener("click", () => {
       elements.menu.classList.remove("sideMenuActive");
@@ -39,11 +39,12 @@ function removeSideMenuAfterClick() {
   });
 }
 
+// ADICIONA EVENTO DE ACIONAR E ESCONDER O MENU ATRAVÉS DAS BARRAS
 function btnSideMenu() {
-  // ADICIONA EVENTO DE ACIONAR E ESCONDER O MENU ATRAVÉS DAS BARRAS
   elements.menuIcon.addEventListener("click", () => {
-    //Adiciona o vento de ao clicar nas "barrinhas" adiciona ou remove o menu
+    //Adiciona o vento de ao clicar nas "barrinhas" adicionar ou remover o menu
     elements.menu.classList.toggle("sideMenuActive");
+    elements.menuIcon.classList.toggle("menuBarActive");
   });
 }
 
@@ -93,6 +94,7 @@ function adjustViewport() {
 // }
 
 window.onload = async () => {
+  console.log("Script is running!");
   await mappingElements();
   await btnSideMenu();
   await removeSideMenuAfterClick();

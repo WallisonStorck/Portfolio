@@ -17,8 +17,11 @@
   }
 
   .menu .side-menu {
-    display: initial;
     visibility: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 5px;
     z-index: 101;
   }
 
