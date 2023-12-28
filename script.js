@@ -4,12 +4,12 @@ let elements = {
   logoIcon: "",
   copyRights: "",
   form: "",
-  formName: "",
-  formMail: "",
-  formPhone: "",
-  formSubject: "",
-  formMessage: "",
-  formBtnSubmit: "",
+  // formName: "",
+  // formMail: "",
+  // formPhone: "",
+  // formSubject: "",
+  // formMessage: "",
+  // formBtnSubmit: "",
 };
 
 function mappingElements() {
@@ -35,6 +35,7 @@ function removeSideMenuAfterClick() {
   [elements.logoIcon, elements.menu].forEach((element) => {
     element.addEventListener("click", () => {
       elements.menu.classList.remove("sideMenuActive");
+      elements.menuIcon.classList.remove("menuBarActive");
     });
   });
 }
@@ -55,9 +56,24 @@ function updateCopyrights() {
 }
 
 function adjustViewport() {
-  let height = window.innerHeight;
-  let sectionPresentation = document.getElementById("presentation");
-  sectionPresentation.height = height + "px";
+  let heightPresentation = window.innerHeight;
+  console.log(`adjustViewport(${heightPresentation})`);
+  if (heightPresentation <= 667) {
+    console.log("Entrou no loop!");
+    let sectionPresentation = document.getElementById("presentation");
+    sectionPresentation.style.minHeight = heightPresentation + "px";
+
+    let divDescription = document.querySelector(".presentation-description");
+    divDescription
+      .querySelectorAll("h1, h3, p, .description-buttons")
+      .forEach((element) => {
+        element.style.margin = "0";
+        element.style.gap = "2rem";
+      });
+
+    let heightDescription = heightPresentation - 110;
+    divDescription.style.minHeight = heightDescription + "px";
+  }
 }
 
 // function sendMessage() {
