@@ -133,10 +133,8 @@ nav {
   align-items: center;
   justify-content: center;
 
-  /* width: 10rem; */
   height: 4rem;
 
-  /* margin-bottom: 1.2rem; */
   text-decoration: none;
   font-size: 1.4rem;
   color: var(--color-grey-1000);
@@ -222,7 +220,6 @@ nav {
 /* ------------------- SECTION - PRESENTATION ------------------- */
 .presentation {
   position: relative;
-  /* margin-top: 8rem; */
   padding-top: 8rem;
 
   height: 100vh;
@@ -261,7 +258,6 @@ nav {
 .presentation .presentation-description {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
 }
 
 .tag-default {
@@ -289,7 +285,6 @@ nav {
 }
 
 .presentation-description p {
-  /* max-width: 570px; */
   margin-bottom: 3.2rem;
   font-size: 1.8rem;
   line-height: 3.6rem;
@@ -344,7 +339,6 @@ nav {
 
 .btn-portfolio:hover::before {
   width: 90%;
-  /* background: var(--color-black-100); */
 }
 
 .mouse-line {
@@ -362,6 +356,7 @@ nav {
   position: relative;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 
@@ -395,7 +390,6 @@ nav {
 
 .images {
   height: 52.2rem;
-  /* padding: 2.8rem 0; */
 
   display: flex;
   gap: 3rem;
@@ -454,26 +448,24 @@ nav {
   list-style: none;
 }
 
-/* ------------------- SECTION - TOOLS ------------------- */
+/* ------------ DIV - TOOLS ------------ */
 .tools {
   display: flex;
   justify-content: center;
 
+  width: 100%;
+  padding: 4rem 0;
+
   background-color: var(--color-primary-100);
 }
 
-.tools .container {
-  padding: 4rem 0;
-
-  display: grid;
-  grid-template-columns: repeat(5, 5rem);
+.tools .container-tools {
+  display: flex;
   align-items: center;
-  justify-content: center;
   gap: 7rem;
 }
 
 .tools img {
-  justify-self: center;
 }
 
 /* ------------------- SECTION - GRADUATIONS ------------------- */
@@ -510,8 +502,6 @@ nav {
 .history {
   padding-left: 25rem;
   display: grid;
-  /* grid-template-columns: 12vw 4vw 45vw; */
-  /* grid-template-rows: 4.5vh auto 4.5vh auto 4.5vh auto; */
   gap: 0 4.5vh;
   grid-template-areas:
     "place-fimca icon-fimca degree-fimca"
@@ -870,14 +860,12 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  /* right: 1184px; */
 }
 
 .rectangle-right-contact {
   position: absolute;
   top: 0;
   right: 0;
-  /* left: 1523px; */
 }
 
 .contact .container {
@@ -993,7 +981,6 @@ footer .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 13rem; */
 }
 
 .text-rights {
