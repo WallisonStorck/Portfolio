@@ -251,6 +251,7 @@ nav {
 
   display: grid;
   grid-template-columns: 2fr 1fr;
+  align-items: center;
   gap: 8rem;
   z-index: 1;
 }
@@ -258,6 +259,8 @@ nav {
 .presentation .presentation-description {
   display: flex;
   flex-direction: column;
+
+  min-height: auto !important;
 }
 
 .tag-default {
@@ -272,6 +275,7 @@ nav {
 }
 
 .presentation-description h3 {
+  margin-top: 0.8rem;
   font-weight: 400;
   font-size: 4.8rem;
   letter-spacing: -0.04em;
@@ -293,6 +297,8 @@ nav {
 }
 
 .description-buttons {
+  margin: 3.2rem 0 0 0 !important;
+
   display: flex;
   gap: 3.2rem;
 }

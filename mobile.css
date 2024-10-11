@@ -66,7 +66,7 @@
   .presentation-description h3 {
     font-size: 2.4rem;
     line-height: 2.7rem;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 !important;
   }
 
   .presentation-description h1 {
@@ -123,12 +123,17 @@
   }
 
   /* ------ TOOLS ------ */
-  .tools .container {
+  .tools {
+    padding: 3rem 0;
+  }
+
+  .tools .container-tools {
     width: 100%;
-    max-width: 306px;
+    /* max-width: 306px; */
 
     grid-template-columns: repeat(5, 2.8rem);
     gap: 3.4rem;
+    justify-content: center;
   }
 
   .tools img {

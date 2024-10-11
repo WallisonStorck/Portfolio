@@ -70,6 +70,7 @@
     grid-template-areas:
       "description"
       "images";
+    gap: 10rem;
   }
 
   .text-about br {
