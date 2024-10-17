@@ -260,7 +260,7 @@ nav {
   display: flex;
   flex-direction: column;
 
-  min-height: auto !important;
+  min-height: auto;
 }
 
 .tag-default {
@@ -297,8 +297,6 @@ nav {
 }
 
 .description-buttons {
-  margin: 3.2rem 0 0 0 !important;
-
   display: flex;
   gap: 3.2rem;
 }

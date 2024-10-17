@@ -43,6 +43,7 @@
     display: none;
     visibility: hidden;
   }
+
   .presentation .container {
     padding: 8.5rem;
     grid-template-columns: 1fr;
@@ -295,6 +296,26 @@
   footer .buttons-social-networks {
     display: initial;
     visibility: visible;
+  }
+
+  /* ---------- Safari em Landscape ---------- */
+  @media (max-height: 300px) {
+    .presentation {
+      width: initial;
+      min-height: 500px;
+    }
+
+    .presentation-description h3 {
+      font-size: 4rem;
+    }
+
+    .presentation-description h1 {
+      font-size: 5rem;
+    }
+
+    .graduations .container {
+      padding: 9.6rem 0 0 0;
+    }
   }
 
   /* --------------- AJUSTES DO MENU INTERATIVO --------------- */
